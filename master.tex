@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+
+\input{../preamble.tex}
+\input{../submols.tex}
+
+\addbibresource{kilder.bib}
+
+\title{KEMISK PRODUKTION \\ Syntese af parabener}
+\author{Oliver Nielsen Bager, 3.A, Tradium HTX}
+\date{26/4-2024} 
+
+\begin{document}
+    
+    \renewcommand{\headrulewidth}{0pt}
+
+    \pagenumbering{Roman}
+    \maketitle
+
+    \begin{figure}[H]
+        \resizebox{\textwidth}{!}{
+            \chemfig{!{ethylparaben}}
+        }
+    \end{figure}
+
+    \vskip 16pt
+    
+    \begin{figure}[H]
+        \resizebox{\textwidth}{!}{
+            \chemfig{!{propylparaben}}
+        }
+    \end{figure} 
+
+    \thispagestyle{fancy}
+
+    \pagebreak
+
+    \tableofcontents
+
+    \pagebreak
+
+    \renewcommand{\headrulewidth}{1pt}
+    \lhead{Molekylær teknologi}
+    \chead{3.A}
+    \rhead{Oliver Bager}
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+
+    \include{indledning}
+    
+    \include{teori.tex}    
+
+    \include{metoder.tex} 
+    
+    \include{resultatbehandling.tex}
+    
+    \include{diskussion.tex}
+
+    \include{konklusion.tex}
+    
+    \pagebreak
+
+    \printbibliography[heading=bibnumbered]
+
+    \pagebreak
+
+    \include{bilag.tex}
+
+\end{document}
