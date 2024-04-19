@@ -3,6 +3,7 @@
 \input{preamble.tex}
 
 \addbibresource{kilder.bib}
+\usetikzlibrary{calc}
 
 \title{KEMISK PRODUKTION \\ Syntese af parabener}
 \author{Oliver Nielsen Bager, 3.A, Tradium HTX}
@@ -15,17 +16,19 @@
     \pagenumbering{Roman}
     \maketitle
 
-    \begin{figure}[H]
-        \resizebox{\textwidth}{!}{
-            \chemfig{!{ethylparaben}}
-        }
-    \end{figure}
-
     \vskip 16pt
+
+    \begin{figure}[H]\centering
+        \scalebox{1.25}{
+            \chemname{\chemfig{OH-*6(=-=(-C(=[7]O)(-[1]CH_{2}(-CH_{3})))-=-)}}{Ethylparaben}
+        }
+        \end{figure}
+
+    \vskip 32pt
     
-    \begin{figure}[H]
-        \resizebox{\textwidth}{!}{
-            \chemfig{!{propylparaben}}
+    \begin{figure}[H]\centering
+        \scalebox{1.25}{
+            \chemname{\chemfig{OH-*6(=-=(-C(=[7]O)(-[1]CH_{2}(-CH_{2}(-CH_{3}))))-=-)}}{Propylparaben}
         }
     \end{figure} 
 

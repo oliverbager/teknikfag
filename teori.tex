@@ -52,7 +52,7 @@
     Nogle studier har dog også vist en forhøjet endokrin forstyrrende virkning hos parabener med længere alkylkæder-- eller forgreninger \parencite{Ebru2013}, hvilket bidragede til at brugen af isopropyl-- og butylparaben blev ulovliggjort i kosmetiske produkter beregnet til børn i Danmark \parencite{Milj2013}, samt levnedsmidler i EU.
     \begin{figure}[H]\centering
         \resizebox{0.75\textwidth}{!}{
-            \chemfig{OH-*6(=-=(-C(=[7]O)(-[1]O(-CH_{2}(-[1]CH_{3})(-[7]CH_{3}))))-=-)}
+            \chemfig{OH-*6(=-=(-C(=[7]O)(-[1]O(-CH(-[1]CH_{3})(-[7]CH_{3}))))-=-)}
         }
         \caption{Isopropylparaben, en forgrenet paraben.}
     \end{figure}
@@ -110,10 +110,9 @@
     \subsection{Synteseprocessen}
     Parabener dannes ved syre--katalyseret esterificering af 4-hydroxybenzoesyre og en vilkårlig alkohol. Dette sker ved at protonen i carboxylsyregruppen fraspaltes under kondensationsreaktion med alkoholens hydroxygruppe, hvorved dets alkylkæde vedhæftes ved oxygenmolekylet ved fraspaltning af et vandmolekyle.
 
-    Som katalysator i denne proces benyttes koncentreret svovlsyre. Under esterificeringsreaktioner benyttes stærke organiske syrere for at muliggøre dannelsen af en carbokation, hvilket muliggør nukleofil addition. Mekanismen bag dette ligger i elektronegativitetsforskellen mellem oxygen-- og carbonatomet i carboxylgruppen som muliggør protonering af en stærk syre.
+    Som katalysator i denne proces benyttes koncentreret svovlsyre. Under esterificeringsreaktioner benyttes stærke organiske syrere for at muliggøre dannelsen af en carbokation, hvilket muliggør nukleofil addition. Dette gøres ved at den stærke syre overfører en proton til det carbonyle oxygenatom hvilket er muligt grundet elektronegativitetsforskellen. Dette medfører en stigning i det carbonyle carbonatoms elektrofilicitet ved dannelse af en carbokation.
     \begin{figure}[H]
         \resizebox{\linewidth}{!}{
-            \setchemfig{scheme debug=false}
             \schemestart
             \chemfig{R-C(=[@{DB1}1]@{DB2}O)(-[7]OH)}
             \+
@@ -122,43 +121,66 @@
             \chemfig{R-C^{+}(-[1]OH)(-[7]OH)}
             \schemestop
             \chemmove{
-                \draw[->] (DB1)+(-0.075,0.075) to[bend left=65] (DB2);
-                \draw[->] (DB2) to [bend left=50] (DB3);
+                \draw[-stealth] ($(DB1)+(-0.075,0.075)$) to[bend left=65,looseness=2] ($(DB2)+(-0.175,0)$);
+                \draw[-stealth] ($(DB2)+(0.2,0)$) to[bend left=65,looseness=1] ($(DB3)+(0,0.2)$);
             }
         }
         \caption{Dannelse af carbokation under reaktion med stærk syre.}
     \end{figure}
-    Alkoholen har i denne reaktion mulighed for at agere som et nukleofil grundet det frie elektronpar på oxygenatomet. En nukleofil addition sker derfor ved carbokationen, hvorved alkoholet vedhæftes ved oxygenatomet.
+    Alkoholen har i denne reaktion mulighed for at agere som et nukleofil grundet de frie elektronpar på oxygenatomet. En nukleofil addition sker derfor ved carbokationen, hvorved alkoholet vedhæftes ved oxoniumionen dannet ved protonoverførsel fra carbokationen.
     \begin{figure}[H]
         \resizebox{\linewidth}{!}{
             \schemestart
-            \chemfig{R-C^{+}(-[1]OH)(-[7]OH)}
+            \chemfig[baseline=6pt]{@{DB1}C^{+}(-[::-30]OH)(-[::-150]R)(=[2]O)}
             \+
-            \chemfig{CH_{3}-[7]CH_{2}-[1]\charge{45=\:,135=\:}{O}-[7]H}
+            \chemfig[baseline=-9pt]{R-[::-35]@{DB2}\charge{225=\:,315=\:}{O}-[::70]H}
             \arrow{->}
-            \chemfig{O^{+}(-[7]H)(-[5]CH_{2}(-[6]CH_{3}))(-[2]CH(-OH)(-[2]OH))}
+            \chemfig[]{C(-[6]O^{+}(-[::60]H)(-[::-60]R))(-[::-160]R)(-[2]O(-[::-60]H))-[::-30]O-[::60]H}
             \schemestop
+            \chemmove{
+                \draw[-stealth] ($(DB2)+(0,-0.3)$) to[bend left=85,looseness=1.25] ($(DB1)+(0,-0.2)$);
+            }
         }
         \caption{Nukleofil addition af alkoholmolekyle.}
     \end{figure}
-    Den dannede ether er en dårlig leaving group, og protonen overføres derfor til den ene af hydroxygrupperne hvilket medfører fraspaltelsen af et vandmolekyle. Samtidigt fjernes den resterende positiv ladning ved omvendelse af reaktionen med hydronen.
+    Den dannede ether er en dårlig leaving group, og protonen overføres derfor til den ene af hydroxygrupperne hvilket medfører dannelsen af et aktiveret kompleks hvorved vandmolekylet fraspaltes. 
     \begin{figure}[H]
         \resizebox{\linewidth}{!}{
             \schemestart
-            \chemfig{O^{+}(-[7]H)(-[5]CH_{2}(-[6]CH_{3}))(-[2]CH(-OH)(-[3]OH))}
+            \chemfig{C(-[6]O(-[::-60]R))(-[::-160]R)(-[@{DB1}2]@{DB2}O^{+}(-[::-60]H)(-[::60]H))-[::-30]O-[::60]H}
             \arrow{->}
-            \chemfig{O(-[5]CH_{2}(-[6]CH_{3}))(-[2]CH(-O^{+}(-[1]H)(-[7]H))(-[3]OH))}
-            \arrow{->}
-            \chemfig{O(-[3]C(=[2]O)(-[5]H))(-[6]CH_{2}(-[7]CH_{3}))}
+            \chemfig{O(-[::210]R)(-[2]C(-[::120]R)(-[::-120]O^{+}(-[::60]H)))}
             \+
             \chemfig{H_{2}O}
+            \schemestop
+            \chemmove{
+                \draw[-stealth] ($(DB1)+(-0.1,0)$) to[bend left=90,looseness=3] ($(DB2)+(-0.35,0)$);
+            }
+        }
+        \caption{Dannelse af aktivt kompleks ved protonoverførsel til hydroxygruppe.}
+    \end{figure}
+    Hvorved elektronenerne det kovalente bånd mellem oxoniumionen og hydrogenatomet opløses, hvilket frigiver elektronen deri og neutraliserer ladningsforskellen ved at frigive hydronen.
+    \begin{figure}[H]
+        \resizebox{\linewidth}{!}{
+            \schemestart
+            \chemfig{O(-[::210]R)(-[2]C(-[::120]R)(-[::-120]@{DB1}O^{+}(-[@{DB2}::60]H)))}
+            \arrow{->}
+            \chemfig{C(-[3]R)(-[5]OR)=O}
             \+
             \chemfig{H^{+}}
             \schemestop
+            \chemmove{
+                \draw[-stealth] ($(DB2)+(0,-0.1)$) to[bend left=75,looseness=3] (DB1);
+            }
         }
-        \caption{Fraspaltning af vand og ladningsneutralisering ved frigivelse af optaget hydron.}
+        \caption{Udligning af ladning og gendannelse af dobbeltbinding ved frigivelse af hydron.}
+        
     \end{figure}
-    Dog er det også nødvendigt at genkende at dette er en ligevægtsreaktion, hvilket medfører at det vil være optimalt at udføre et indgreb der forskyder ligevægten mod produktsiden. Ideelt villet vi kunnet fradestillere vandet under reaktionen, men grundet dets højere kogepunkt end de benyttede alkoholer er dette ikke en mulighed. Vi tilsætter derfor alkohol i overskud.
+    Da hydronerne ikke opbruges under reaktionen er det nødvendigt at neutralisere opløsningen for at gøre den sikker at håndtere. Dog er det også nødvendigt at genkende at dette er en ligevægtsreaktion: 
+    \[
+    \mathrm{C_7H_6O_3+ROH} \rightleftarrows \mathrm{C_7H_5O_3R+H_2O}
+    \] 
+    Hvilket medfører at det vil være optimalt at udføre et indgreb der forskyder ligevægten mod produktsiden. Ideelt villet vi kunnet fradestillere vandet under reaktionen, men grundet dets højere kogepunkt end de benyttede alkoholer er dette ikke en mulighed. Vi tilsætter derfor alkohol i overskud.
     
     \subsection{Smeltepunktsbestemmelse}
     Smeltepunktsbestemmelse gør det muligt at få en generel ide om et molekyles struktur. Et givent molekyles smeltepunkt er hovedsageligt bestemt af hvor tæt molekylet kan pakkes. I forbindelse med parabener vil vi derfor forvente et fald i smeltepunkt i takt med at længden af alkylkæden stiger, da der er begrænset mulighed for at danne Londonbindinger siden den aromatiske ring optager en stor volumen i rummet.
