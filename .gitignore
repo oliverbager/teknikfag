@@ -11,3 +11,4 @@
 *.bcf-SAVE-ERROR
 *.bbl-SAVE-ERROR
 *.bcf
+*.synctex.gz.sum.synctex
