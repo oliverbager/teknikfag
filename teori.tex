@@ -60,12 +60,8 @@
 
     Dog er brugen af methyl--, ethyl--, propyl-- og butylparaben erklæret harmløst i kosmetik indenfor en grænseværdi af EUs videnskabskomitte, mens det ikke har været muligt at drage definitive konklusioner for isopropyl--, isobutyl--, phenyl--, benzyl-- og pentylparabener grundet manglende data \parencite{Henr2013}, og brugen deraf er derfor forbudt. En acceptabel daglig dosis for summen af methyl-- og ehtylparaben fra levnedsmidler er $0-10\si{mg\per kg}$
 
-    Disse værdier er i praksis nærmest umulig at overskride. Et spansk studie \parencite{Yola2020} fandt et gennemsnitligt parabenindhold på $73.86\si{ng\per g}$, ved undersøgelse af 98 forskellige levnedsmidler fra et supermarked. En gennemsnitlig person skullet med udgangspunkt deri  indtage:
-    \begin{align*}
-        m_{\text{levnedsmidler}}\cdot 7.386 \cdot 10^{-8}\si{g}&=10\si{mg\per kg} \cdot 70\si{kg} \\
-        &\Updownarrow \\
-        m_{\text{levnedsmidler}}&=\frac{0.7\si{g}}{7.386\cdot 10^{-8}\si{g}}\approx 9.5\si{t}
-    \end{align*}
+    Disse værdier er i praksis nærmest umulig at overskride. Et spansk studie \parencite{Yola2020} fandt et gennemsnitligt parabenindhold på $73.86\si{ng\per g}$, ved undersøgelse af 98 forskellige levnedsmidler fra et supermarked, hvilket medfører at en gennemsnitlig person ($m=70\si{kg}$) skulle indtage ca.\ $9.5\si{t}$ levnedsmidler for at nå grænseværdien.
+    
     Med udgangspunkt i den eksisterende litteratur er det derfor svært at opstille et kausativt sammenhæng mellem brugen af parabener og en negativ sundhedsmæssig indvirkning. På trods af konstant granskning siden deres første dokumenterede brug i 1920'erne \parencite{Mary1984}, eksisterer stadig ikke bevis for parabeners negative sundhedspåvirkning, hvilket videre bidrager til argumentationen for deres brug i både kosmetik samt levnedsmidler. 
 
     Flere undersøgelser, specielt i mennesker, er dog nødvendige for at opstille en definitiv konklusion for indtagsgrænserne, og de er derfor sat relativt konservativt. Dog er de kategoriserede som GRAS (\textit{Generally Recognized as Safe}) af Amerikas levnedsmiddelsstyrrelse \parencite{FDA2022}.
@@ -165,7 +161,7 @@
         }
         \caption{Dannelse af aktivt kompleks ved protonoverførsel til hydroxygruppe samt fraspaltning af vandmolekyle.}
     \end{figure}
-    Hvorved det kovalente bånd mellem oxonium--ionen og hydrogen--atomet opløses, hvilket frigiver elektronen som optages af oxonium--ionen grundet elektronegativitetsforskellen, og neutraliserer ladningsforskellen.
+    Hvorved det kovalente bånd mellem oxonium--ionen og hydrogen--atomet opløses, hvilket frigiver elektronen som optages af oxonium--ionen grundet elektronegativitetsforskellen, og neutraliserer ladningen.
     \begin{figure}[H]
         \resizebox{\linewidth}{!}{
             \schemestart
@@ -179,7 +175,7 @@
                 \draw[->] ($(DB1)+(0,-0.1)$) to[bend left=75,looseness=1.5] ($(DB2)+(0.2,-0.1)$);
             }
         }
-        \caption{Udligning af ladning og gendannelse af dobbeltbinding ved frigivelse af hydron.}
+        \caption{Neutralisering af ladning ved frigivelse af hydron.}
     \end{figure}
     Da hydronerne ikke opbruges under reaktionen er det nødvendigt at neutralisere opløsningen for at gøre den sikker at håndtere. Dog er det også nødvendigt at genkende at dette er en ligevægtsreaktion: 
     \[
@@ -191,7 +187,24 @@
     Smeltepunktsbestemmelse gør det muligt at få en generel ide om et molekyles struktur. Et givent molekyles smeltepunkt er hovedsageligt bestemt af hvor tæt molekylet kan pakkes. I forbindelse med parabener vil vi derfor forvente et fald i smeltepunkt i takt med at længden af alkylkæden stiger, da der er begrænset mulighed for at danne Londonbindinger siden den aromatiske ring optager en stor volumen i rummet.
 
     \subsection{Tyndtlagschromatografi}
-    Tyndtlagschromatografi benyttes til at analysere renheden af-- og identificere eventuelle urenheder i et givent produkt. Metoden benytter den sandsynlige polaritetsforskel af dannede molekyler til at skille dem ad. Dette gøres ved at placere stoffet på en stærkt polær plade (oftest en plade coatet med silicagel grundet dets overfladiske hydroxygrupper). Ved så at tilføje en løbevæske og lade den vandre op ad pladen, vil stofferne ``trækkes'' forskellige afstande da pladen vil holde bedre fast i de polære-- end upolære stoffer.
+    Tyndtlagschromatografi benyttes til at analysere renheden af-- og identificere eventuelle urenheder i et givent produkt. Metoden benytter den sandsynlige polaritetsforskel af dannede molekyler til at skille dem ad. Dette gøres ved at placere stoffet på en stærkt polær plade (oftest en plade coatet med silicagel grundet dets overfladiske hydroxygrupper). 
+    \begin{figure}[H]\centering
+        \resizebox{\linewidth}{!}{
+            \begin{tikzpicture}
+                \draw[thick] (0,0) rectangle (15,-.5);
+                \node at (7.5,-.25){Plastik--/aluminiumsplade};
+                \foreach \x in {0,3,6,9,12}{
+                    \draw[-,thick] (\x,0) to[bend left=45] node(a)[pos=.25]{} node(b)[pos=.5]{} node(c)[pos=.75]{} ($(\x,0)+(3,0)$);
+                    \draw[-,thick] ($(a)$) -- ($(a)+(-.25,.25)$) node[anchor=south]{OH};
+                    \draw[-,thick] ($(b)$) -- ($(b)+(0,.25)$) node[anchor=south]{OH};
+                    \draw[-,thick] ($(c)$) -- ($(c)+(.25,.25)$) node[anchor=south]{OH};
+                    \node at ($(b)+(0,-.35)$){SiO$_2$}; 
+            }
+            \end{tikzpicture}
+        }
+        \caption{Illustration af hydroxygrupper på silicagel--pålagt TLC--plade.}
+    \end{figure}
+    Ved at tilføje en løbevæske og lade den vandre op ad pladen, vil stofferne ``trækkes'' forskellige afstande da pladen vil holde bedre fast i de polære-- end upolære stoffer.
 
     Endvidere giver dette også mulighed for at samligne med kommercielt indkøbte stoffer, hvor man er sikker på renhed, idet man-- hvis det korrekte produkt er dannet, ville forvente at have ens løbelængder.
     
@@ -470,8 +483,8 @@
     \begin{figure}[H]\centering
         \resizebox{0.75\linewidth}{!}{
             \begin{tikzpicture}
-                \node[circle,draw,minimum size=3.5cm,thick] (A) at (0,0);
-                \node[circle,draw,minimum size=3.5cm,thick] (B) at (10,0);
+                \node[circle,draw,minimum size=3.5cm,thick] (A) at (0,0){};
+                \node[circle,draw,minimum size=3.5cm,thick] (B) at (10,0){};
                 \draw[thick,decoration={pre length=1mm, post length=1mm, segment length=2.5mm,amplitude=5mm,zigzag},decorate] (A) -- (B);
             \end{tikzpicture}
         }
@@ -481,10 +494,10 @@
     \begin{figure}[H]\centering
         \resizebox{\linewidth}{!}{
             \begin{tikzpicture}
-                \node[circle,draw,minimum size=2cm,thick] (A) at (0,0);
-                \node[circle,draw,minimum size=2.5cm,thick] (B) at (5,0);
-                \node at (5,2){Symmetrisk strækning}
-                \node[circle,draw,minimum size=2cm,thick] (C) at (10,0);
+                \node[circle,draw,minimum size=2cm,thick] (A) at (0,0){};
+                \node[circle,draw,minimum size=2.5cm,thick] (B) at (5,0){};
+                \node at (5,2){Symmetrisk strækning};
+                \node[circle,draw,minimum size=2cm,thick] (C) at (10,0){};
                 \draw[-,thick] (A) -- (B);
                 \draw[-,thick] (C) -- (B);
                 \draw[->,red,thick] (2.375,1.5) -- (0.5,1.5);
@@ -492,10 +505,10 @@
                 \draw[->,red,thick] (7.65,1.5) -- (9.5,1.5);
                 \draw[->,blue,thick] (7.65,1.5) -- (5.75,1.5);
                 
-                \node[circle,draw,minimum size=2cm,thick] (D) at (0,-4);
-                \node[circle,draw,minimum size=2.5cm,thick] (E) at (5,-4);
-                \node at (5,-2){Asymmetrisk strækning}
-                \node[circle,draw,minimum size=2cm,thick] (F) at (10,-4);
+                \node[circle,draw,minimum size=2cm,thick] (D) at (0,-4){};
+                \node[circle,draw,minimum size=2.5cm,thick] (E) at (5,-4){};
+                \node at (5,-2){Asymmetrisk strækning};
+                \node[circle,draw,minimum size=2cm,thick] (F) at (10,-4){};
                 \draw[-,thick] (D) -- (E);
                 \draw[-,thick] (F) -- (E);
                 \draw[->,red,thick] (2.375,-2.5) -- (0.5,-2.5);
@@ -510,10 +523,10 @@
     \begin{figure}[H]\centering
         \resizebox{\linewidth}{!}{
             \begin{tikzpicture}
-                \node[circle,draw,minimum size=2cm,thick] (a) at (0,0);
-                \node[circle,draw,minimum size=2.5cm,thick] (b) at (5,0);
-                \node at (5,2){Symmetrisk bøjning}
-                \node[circle,draw,minimum size=2cm,thick] (c) at (10,0);
+                \node[circle,draw,minimum size=2cm,thick] (a) at (0,0){};
+                \node[circle,draw,minimum size=2.5cm,thick] (b) at (5,0){};
+                \node at (5,2){Symmetrisk bøjning};
+                \node[circle,draw,minimum size=2cm,thick] (c) at (10,0){};
                 \draw[-,thick] (a) -- (b);
                 \draw[-,thick] (c) -- (b);
                 \draw[->,blue,thick] (-2,0) to[bend right=12] (-1.75,-1);
@@ -521,10 +534,10 @@
                 \draw[->,blue,thick] (12,0) to[bend left=12] (11.75,-1);
                 \draw[->,red,thick] (12,0) to[bend right=12] (11.75,1);
                 
-                \node[circle,draw,minimum size=2cm,thick] (d) at (0,-4);
-                \node[circle,draw,minimum size=2.5cm,thick] (e) at (5,-4);
-                \node at (5,-2){Asymmetrisk bøjning}
-                \node[circle,draw,minimum size=2cm,thick] (f) at (10,-4);
+                \node[circle,draw,minimum size=2cm,thick] (d) at (0,-4){};
+                \node[circle,draw,minimum size=2.5cm,thick] (e) at (5,-4){};
+                \node at (5,-2){Asymmetrisk bøjning};
+                \node[circle,draw,minimum size=2cm,thick] (f) at (10,-4){};
                 \draw[-,thick] (d) -- (e);
                 \draw[-,thick] (f) -- (e);
                 \draw[->,blue,thick] (-2,-4) to[bend right=12] (-1.75,-5);
