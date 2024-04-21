@@ -286,7 +286,7 @@
     For større molekyler bliver dette umådeligt komplekst, og der er derfor opstilt generelle regler for hvad et molekyles spin vil være:
     \begin{table}[H]\centering
         \caption{Generelle regler for tilskrivning af molekylært spin.}
-        \begin{tabular}{*{5}{c}}
+        \begin{tabular}{ccccc}
             \toprule
             Massenummer & Antal protoner & Antal neutroner & Spin & Eksempel \\
             \midrule
@@ -467,9 +467,10 @@
     Hvilket får dem til at vibrere. Disse vibrationer manifesterers som en fjederlignende bevægelse af det kovalente bånd mellem molekylerne, hvilket ligesom i NMR medfører en ændring i molekylets magnetiske moment, der kan måles. Afhængigt af molekylstrukturen er der dog flere forskellige muligheder for vibrationer:
     \begin{table}[H]\center
         \caption{Mulige strækninger for molekyler af forskellige strukture.}
-        \begin{tabular}{ccccc}
+        \begin{tabular*}{\linewidth}{c@{\extracolsep{\fill}}cccc}
             \toprule
             & \multicolumn{2}{c}{Symmetrisk} & \multicolumn{2}{c}{Asymmetrisk} \\
+            \cmidrule(r){2-3} \cmidrule(r){4-5}
             & Bøjning & Strækning & Bøjning & Strækning \\
             \midrule
             Monoatomig & \times & \times & \times & \times \\
@@ -477,7 +478,7 @@
             Triatomig & \checkmark & \checkmark & \checkmark & \checkmark \\
             Polyatomig & \checkmark & \checkmark & \checkmark & \checkmark \\
             \bottomrule
-        \end{tabular} 
+        \end{tabular*} 
     \end{table}
     I tilfældet med diatomige molekyler det simpelt at illustrere den mulige vibration da det kovalente bånd mellem dem udelukkende kan strækkes eller komprimeres, hvilket medfører en fjeder--lignende vibration.
     \begin{figure}[H]\centering
