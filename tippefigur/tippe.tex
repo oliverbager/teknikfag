@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+
+\usepackage{tikz}
+\usepackage{gensymb}
+\usepackage{float}
+
+\begin{document}
+
+\begin{figure}[H]
+    \resizebox{\linewidth}{!}{
+    \begin{tikzpicture}
+
+        \draw[-stealth,thick,dotted] (0,0) -- (4,0) node[right]{$x$}; 
+        \draw[-stealth,thick,dotted] (0,0) -- (0,4) node[above]{$z$}; 
+        \draw[-stealth,thick,dotted] (0,0) -- (-2,-3) node[below left]{$y$};
+        \draw[-stealth,ultra thick,cyan] (0,0) -- (0,3); 
+        \node[right,cyan] at (0,3){$\vec{\mu}$};
+        \draw[-stealth,ultra thick] (0,-3) -- (0,-1) node[right]{$B_0$};
+
+        \draw[-stealth,thick,dotted] (10,0) -- (13,0) node[right]{$x$}; 
+        \draw[-stealth,thick,dotted] (10,0) -- (10,4) node[above]{$z$}; 
+        \draw[-stealth,thick,dotted] (10,0) -- (8,-3) node[below left]{$y$};
+        \draw[-stealth,ultra thick,cyan] (10,0) -- (11.5,1.5) ;
+        \draw[stealth-stealth,thick,red] (10,1.5) to[bend left] node[pos=.25,above right]{$45 \degree$} (10.8,0.84);
+        \node[right,cyan] at (11.5,1.5){$\vec{\mu}$};
+        \draw[-stealth,ultra thick] (10,-3) -- (10,-1) node[right]{$B_0$};
+        \draw[-stealth,ultra thick] (17,0) -- (14,0) node[below]{$B_1$};
+
+        \draw[-stealth,thick,dotted] (22,0) -- (26,0) node[right]{$x$}; 
+        \draw[-stealth,thick,dotted] (22,0) -- (22,4) node[above]{$z$}; 
+        \draw[-stealth,thick,dotted] (22,0) -- (20,-3) node[below left]{$y$};
+        \draw[stealth-stealth,thick,red] (22,0.5) to[bend left=45] node[pos=.5,above right]{$90\degree$} (22.5,0);
+        \draw[-stealth,ultra thick,cyan] (22,0) -- (25,0);
+        \node[below,cyan] at (22,0){$\vec{\mu}$};
+        \draw[-stealth,ultra thick] (22,-3) -- (22,-1) node[right]{$B_0$};
+        \draw[-stealth,ultra thick] (30,0) -- (27,0) node[below]{$B_1$};
+        \node at (1.5,-4){(a)};
+        \node at (12,-4){(b)};
+        \node at (24.5,-4){(c)};
+
+    \end{tikzpicture}
+    }
+\end{figure}
+
+\end{document}
