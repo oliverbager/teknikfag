@@ -397,16 +397,14 @@
             \draw[-stealth,thick,densely dashed] (0,0) -- (4,0) node[right]{$x$}; 
             \draw[-stealth,thick,densely dashed] (0,0) -- (0,4) node[above]{$z$}; 
             \draw[-stealth,thick,densely dashed] (0,0) -- (-2,-3) node[below left]{$y$};
-            \draw[-stealth,ultra thick,cyan] (0,0) -- (0,3); 
-            \node[right,cyan] at (0,3){$\vec{\mu}$};
+            \draw[-stealth,ultra thick,cyan] (0,0) -- +(90:3) node[right,cyan]{$\vec{\mu}$};
             \draw[-stealth,ultra thick] (0,-3) -- (0,-1) node[right]{$B_0$};
 
             \draw[-stealth,thick,densely dashed] (8,0) -- (11,0) node[right]{$x$}; 
             \draw[-stealth,thick,densely dashed] (8,0) -- (8,4) node[above]{$z$}; 
             \draw[-stealth,thick,densely dashed] (8,0) -- (6,-3) node[below left]{$y$};
-            \draw[-stealth,ultra thick,cyan] (8,0) -- (9.5,1.5);
+            \draw[-stealth,ultra thick,cyan] (8,0) -- +(45:2) node[right,cyan]{$\vec{\mu}$};
             \draw[stealth-stealth,thick,red] (8,0.75) to[bend left] node[pos=.25,above right,font=\footnotesize]{$\qty{45}\degree$} (8.4,0.43);
-            \node[right,cyan] at (9.5,1.5){$\vec{\mu}$};
             \draw[-stealth,ultra thick] (8,-3) -- (8,-1) node[right]{$B_0$};
             \draw[-stealth,ultra thick] (14,0) -- (12,0) node[below]{$B_1$};
 
@@ -414,8 +412,7 @@
             \draw[-stealth,thick,densely dashed] (18,0) -- (18,4) node[above]{$z$}; 
             \draw[-stealth,thick,densely dashed] (18,0) -- (16,-3) node[below left]{$y$};
             \draw[stealth-stealth,thick,red] (18,0.75) to[bend left=45,font=\footnotesize] node[pos=.5,above right]{$\qty{90}\degree$} (18.75,0);
-            \draw[-stealth,ultra thick,cyan] (18,0) -- (21,0);
-            \node[below,cyan] at (19,0){$\vec{\mu}$};
+            \draw[-stealth,ultra thick,cyan] (18,0) -- +(0:3) node[below,cyan]{$\vec{\mu}$};
             \draw[-stealth,ultra thick] (18,-3) -- (18,-1) node[right]{$B_0$};
             \draw[-stealth,ultra thick] (25,0) -- (23,0) node[below]{$B_1$};
             \node at (2,-4){(a)};
