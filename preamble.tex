@@ -5,29 +5,41 @@
 
 % Design
 \usepackage{transparent}
-\usepackage{pgfplots}
-\usepackage{tabularx}
-\usepackage{graphicx}
 \usepackage{fancyhdr}
-\usepackage{pdfpages}
 \usepackage{siunitx}
-\usepackage{chemfig}
-\usepackage{caption}
 \usepackage{parskip}
 \usepackage{xcolor}
-\usepackage{array}
-\usepackage{float}
-\usepackage{calc}
 
 % Maths
-\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb, gensymb}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{calc}
 
-% Functionality
+% Plotting
+\usepackage{pgfplots}
+
+% Bibliography
 \usepackage[style=apa,backend=biber]{biblatex}
+\usepackage{csquotes}
+\usepackage{url}
+
+% Figures
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{chemfig}
+\usepackage{caption}
+\usepackage{float}
+
+% Tables
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{multicol}
-\usepackage{url}
+\usepackage{multirow}
+\usepackage{array}
 
 % Hyperref
 \usepackage{hyperref}
@@ -35,6 +47,8 @@
 % Definitions
 \captionsetup[figure]{belowskip=-10pt}
 \captionsetup[table]{aboveskip=3pt}
+\pgfplotsset{compat=1.18}
+\pdfminorversion=7
 
 \renewcommand{\subsectionmark}[1]{\markright{#1}}
 \renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}

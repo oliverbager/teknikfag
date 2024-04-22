@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{parskip}
+\usepackage{gensymb}
+\usepackage{caption}
+\usepackage{float}
+
+\begin{document}
+
+\begin{figure}[H]\centering
+    \caption{Smeltepunkt og RF (retentionsfaktor) for stof dannet ved de 3 synteser, samt sammenligning med teoretiske værdier for kommercielt stof.}
+    \begin{tabular*}{\linewidth}{c@{\extracolsep{\fill}}cccccccc}
+        \toprule
+        & & & & & \multicolumn{4}{c}{Syntese 3} \\
+        \cmidrule(r){6-9}
+        & \multicolumn{2}{c}{Syntese 1} & \multicolumn{2}{c}{Syntese 2} & \multicolumn{2}{c}{Ethyl} & \multicolumn{2}{c}{Propyl} \\
+        \cmidrule(r){2-3} \cmidrule(r){4-5} \cmidrule(r){6-7} \cmidrule(r){8-9}
+        Prøve \# & SMP & RF & SMP & RF & SMP & RF & SMP & RF \\
+        \midrule
+        1 & 116 & 0.24 & 95 & 0.63 & 116 & 0.50 & 96 & 0.49 \\
+        2 & 115 & 0.20 & 96 & 0.67 & 116 & 0.49 & 93 & 0.45 \\
+        3 & 116 & 0.21 & 96 & 0.59 & 117 & 0.49 & 94 & 0.45 \\
+        \midrule
+        Teoretisk & 117 & 0.22 & 97 & 0.63 & 117 & 0.49 & 97 & 0.46 \\
+        Gennemsnit & 116 & 0.22 & 95.7 & 0.63 & 116.3 & 0.49 & 94.3 & 0.46 \\
+        \midrule
+        Afvigelse $\left[\si{\%}\right]$ & -1 & 0 & -1 & 2 & -1 & 0 & -3 & 0 \\
+        \bottomrule
+    \end{tabular*}
+\end{figure} \vskip -8pt
+Med udgangspunkt i hhv.\ smeltepunkts-- samt TLC--analysen vil det være rimeligt at antage at det dannede stof sandsynligvis er hvad vi tror det er. De relativt høje afvigelser for smeltepunktet hos propylparaben kan hovedsageligt tilskrives større partikelstørrelse, da pulveret var svært at knuse ordentligt hvilket medførte mindre tæt pakning.
+\end{document}

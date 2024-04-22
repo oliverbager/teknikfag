@@ -14,12 +14,13 @@
         \caption{Kondensationsreaktion mellem 4-hydroxybenzoesyre og vilkårlig alkohol, dannet vandmolekyle udeladt.}
     \end{figure}
     Afhængigt af hvor de skal benyttes, er det derfor også fordelagtigt at udvælge parabener med foretrækkelige egenskaber. Eksempelvis ses methylparaben oftest benyttet i levnedsmidler grundet dets højere opløselighed i vandige faser, mens blandinger-- eller parabener med længere alkylkæder oftest vil benyttes i kosmetik.
-    \begin{table}[H]
+    \begin{table}[H]\centering
         \caption{Fysiske egenskaber af forskellige parabener \parencite{PubChem}.}
-        \resizebox{\textwidth}{!}{
         \begin{tabular}{ccccc}
             \toprule
-            & Vand opl. $\left[{\si{g\per 100g}}\right]$ & Ethanol opl. $\left[{\si{g\per 100g}}\right]$ & $\si{MV} \left[\si{g\per mol}\right]$ & $\si{SMP} \left[\mathrm{\degree C}\right]$ \\
+            & \multicolumn{2}{c}{Opløselighed $\left[\si{g\per 100g}\right]$} & & \\
+            \cmidrule(r){2-3}
+            Paraben & Vand & Ethanol & MV $\left[\si{g\per mol}\right]$ & SMP $\left[\si{\degree C}\right]$ \\
             \midrule
             Methylparaben & 0.25 & 52 & 152.15 & 125 \\
             Ethylparaben & 0.085 & 70 & 166.17 & 117 \\ 
@@ -27,7 +28,6 @@
             Butylparaben & 0.021 & 210 & 194.23 & 68 \\
             \bottomrule
         \end{tabular}
-        }
     \end{table}
     Alternativt kan typisk ester-navngivning også benyttes, dog angives parabener hyppigst ved navnet på deres alkylkæde efterfulgt af \textit{paraben}, eksempelvis: \textit{ethylparaben}. \textit{Paraben} stammer fra navnet på 4-hydroxybenzoesyre. Alternativ navngivning jf. de relative molekylepositioner villet medføre at den kaldes \textit{p}-hydroxybenzoesyre, grundet hydroxygruppens placering i \textit{para}-positionen, derfra kommer \textit{para}-hydroxy\textit{ben}zoesyre.
 
@@ -188,7 +188,7 @@
 
     \subsection{Tyndtlagschromatografi}
     Tyndtlagschromatografi benyttes til at analysere renheden af-- og identificere eventuelle urenheder i et givent produkt. Metoden benytter den sandsynlige polaritetsforskel af dannede molekyler til at skille dem ad. Dette gøres ved at placere stoffet på en stærkt polær plade (oftest en plade coatet med silicagel grundet dets overfladiske hydroxygrupper). 
-    \begin{figure}[H]\centering
+    \begin{figure}[H]
         \resizebox{\linewidth}{!}{
             \begin{tikzpicture}
                 \draw[thick] (0,0) rectangle (15,-.5);
@@ -208,7 +208,6 @@
 
     Endvidere giver dette også mulighed for at samligne med kommercielt indkøbte stoffer, hvor man er sikker på renhed, idet man-- hvis det korrekte produkt er dannet, ville forvente at have ens løbelængder.
     
-
     \subsection{Spektroskopi}
     Spektroskopi er den videnskabelige disciplin der beskæftiger sig med måling-- og studiet af frekvensspektra. Et frekvensspektra dannes ved at undersøge hvordan elektromagnetiske bølger (radiobølger, mikrobølger, infrarøde bølger, osv.) interagerer med eksempelvis molekyer \parencite{Sigu2024}. Afhængigt af deres bølgelænde tildeles de forskellige navne: 
     \begin{figure}[H]
@@ -258,6 +257,25 @@
         }
         \caption{Det elektromagnetiske spektrum \parencite{Birg2012}.}
     \end{figure}
+    \begin{table}[H]\centering
+        \caption{Molekylær effekt og fysiske egenskaber af forskellige bølgetyper.}
+        \begin{tabular}{cccc}
+            \toprule
+            Bølgetype & Bølgelængde $\left[\si{cm}\right]$ & Energi $\left[\si{kcal\per mol}\right]$ & Molekylær effekt \\
+            \midrule
+            Gamma & $10^{-9}$ & $10^6$ & \multirow{3}{*}{Ionisering} \\
+            X--ray & $10^{-7}$ & $10^4$ \\
+            Vakuum UV & $10^{-5}$ & $10^{-9}$ \\
+            \midrule
+            Tæt UV & $10^{-4}$ & $10^2$ & \multirow{2}{*}{Elektrontransistion} \\
+            Synlig & $10^{-3}$ & $10$ \\
+            \midrule
+            Infrarød & $10^{-1}$ & $10^{-2}$ & Vibration \\
+            Mikro & $10^2$ & $10^{-4}$ & Rotation \\
+            Radio & $10^4$ & $10^{-6}$ & Spintransistion \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
     Når en elektromagnetisk bølge pålægges et molekyle er der en række forskellige muligheder, hvorved der konsekvent er mulighed for dannelsen af forskellige spektra der viser det enkelte molekyles spektrofotometriske egenskaber \parencite{Finn2020}:
     \begin{itemize}
         \item[1)] \textit{Absorbtionsspektrum}, kontinuert spektrum der måler et molekyles evne til at absorbere lys af en given bølgelængde (og derved energi), gør det muligt at identificere bølgelængderne som et molekyle har mulighed for at optage.
@@ -296,28 +314,12 @@
             \bottomrule
         \end{tabular}
     \end{table}
-    Da spin for atomer er analogt til vinkelmomentet for makroskopiske objekter, må de også kunnet beskrives som vektorer med en magnitude, $L$ og retning, $m$. Disse er givet ved:
+    Da spin for atomkerner er analogt til vinkelmoment for makroskopiske objekter, må de kunnet beskrives som vektorere med en magnitude og retning. Dette betyder at deres enkelte magnetiske momenter præcesserer om $z$--aksen. Dog indeholder prøver altid en enorm mængde individuelle atomkerne, og det giver derfor mere mening at beskrive dem ved summen af deres magnetiske momenter, \textit{bulk magnetiseringen}, $M$, der vil være en skalar af $z$--aksens enhedsvektor uden ydre påvirkning. 
     \[
-        L=h\sqrt{I^2+I} \hskip 32pt m=-I,-I+1,-I+2,\ldots+I
+        \overrightarrow{M}=\sum\overrightarrow{\mu}=c\cdot \hat{z}
     \]
-    Dette medfører at vinkelmomentet påtager sig diskrete værdier afhængigt af den valgte værdi for $m$, hvorved vinkeltmomentet langs $z$-aksen kan bestemmes ved:
-    \[
-        I_z=mh
-    \]
-    \begin{figure}[H]\centering
-        \includegraphics[width=\textwidth]{billeder/projektion}
-        \caption{Vinkelmomentet langs $z$-aksen afhængigt af $I$.}
-    \end{figure}
-    Samtidigt er det klart at da atomkerner er ladede må de, når de bevæger sig, danne et magnetisk felt, og derved også have et magnetisk moment som er givet ved:
-    \[
-        \mu = \gamma I
-    \]
-    Hvor $\gamma$ er det \textit{gyromagnetiske forhold} for kerneisotopen. Idet en given prøve i praksis altid vil indeholde mere end en atomkerne beskriver vi det magnetiske moment ved prøvens \textit{bulk magnetisering}, $\vec{M}$, svarende til summen af hvert magnetiske moment:
-    \[
-        \vec{M}=\sum\vec{\mu}
-    \]
-    Da vektorerne i det fri vil have vilkårlige retninger vil $M=0$ uden ydre påvirkning. Hvis prøvematerialet derimod \textit{ikke}  er i det fri, men i stedet påvirket af et kraftigt ydre magnetfelt, $B_0$, vil atomkernernes magnetiske momenter enten rette sig efter (lav energi, $m=-\frac{1}{2}$)-- eller mod det (høj energi, $m=\frac{1}{2}$). 
-    \begin{figure}[H]\centering
+    Da vektorerne i det fri vil have vilkårlige retninger vil $\overrightarrow{M}=0$ uden ydre påvirkning. Hvis prøvematerialet derimod \textit{ikke}  er i det fri, men i stedet påvirket af et kraftigt ydre magnetfelt, $B_0$, vil atomkernernes gennemsnitlige magnetiske moment enten rette sig efter (lav energi, $m=-\frac{1}{2}$)-- eller mod det (høj energi, $m=\frac{1}{2}$). 
+    \begin{figure}[H]
         \resizebox{\textwidth}{!}{
             \begin{tikzpicture}
                 \draw[-stealth,thick] (0,0) -- (0,4);
@@ -349,17 +351,87 @@
         \frac{n_{\text{høj}}}{n_{\text{lav}}}=\mathrm{e}^{\frac{\Delta E}{kT}}
     \]
     som medfører at $M \neq 0$, da der vil være en populationsforskle med bias mod det lave energistadie, hvilket medfører at vi har en bulk magnetiseringsvektor givet ved en positiv skalar af en enhedsvektor langs $z$-aksen.
+    \begin{figure}[H]
+        \vskip -42pt
+        \resizebox{\linewidth}{!}{
+        \begin{tikzpicture} \hskip -32pt
+            \begin{axis}[
+                view={-45}{-35},axis lines=center,densely dashed,
+                xmax=3,xmin=-3,ymax=3,ymin=-3,zmax=5,zmin=-5,
+                xtick=\empty,ytick=\empty,ztick=\empty
+                ]
+
+                \addplot3+[
+                    thick,solid,cyan,
+                    domain=0:2*pi,
+                    samples=400, samples y=0,mark=none,
+                ] ({sin(deg(x))},{cos(deg(x))},{2.75});
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(0))},{cos(deg(0))},2.75);
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(30))},{cos(deg(30))},2.75);
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(60))},{cos(deg(60))},2.75);
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(90))},{cos(deg(90))},2.75);
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(120))},{cos(deg(120))},2.75);
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(150))},{cos(deg(150))},2.75);
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(180))},{cos(deg(180))},2.75);
+
+                \addplot3+[
+                    thick,solid,cyan,
+                    domain=0:2*pi,
+                    samples=400,samples y=0,mark=none,
+                ] ({sin(deg(x))},{cos(deg(x))},{-2.75});
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(0))},{cos(deg(0))},-2.75);
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(30))},{cos(deg(30))},-2.75);
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(60))},{cos(deg(60))},-2.75);
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(90))},{cos(deg(90))},-2.75);
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(120))},{cos(deg(120))},-2.75);
+                \draw[-stealth,solid] (axis cs:0,0,0) -- (axis cs:{sin(deg(150))},{cos(deg(150))},-2.75);
+            \end{axis}
+        \node at (1.4,2){$x$};
+        \node at (5.4,2){$y$};
+        \node at (3.4,4.5){$z$};
+        \end{tikzpicture} \hskip -64pt 
+        \begin{tikzpicture}
+            \node at (0,0){};
+            \draw[-stealth,solid] (0,2.25) -- node[above]{$\sum$} (1,2.25);
+        \end{tikzpicture} \hskip -32pt 
+        \begin{tikzpicture}
+            \begin{axis}[
+                view={-45}{-35},axis lines=center,densely dashed,
+                xmax=3,xmin=-3,ymax=3,ymin=-3,zmax=5,zmin=-5,
+                xtick=\empty,ytick=\empty,ztick=\empty
+                ]
+
+                \addplot3+[
+                    thick,solid,white,
+                    domain=0:2*pi,
+                    samples=400, samples y=0,mark=none,
+                ] ({sin(deg(x))},{cos(deg(x))},{2.75});
+
+                \addplot3+[
+                    thick,solid,white,
+                    domain=0:2*pi,
+                    samples=400,samples y=0,mark=none,
+                ] ({sin(deg(x))},{cos(deg(x))},{-2.75});
+            \draw[-stealth,solid,thick,red] (axis cs:0,0,0) -- (axis cs:0,0,3) node[right]{$M$};
+            \end{axis}
+        \node at (1.4,2){$x$};
+        \node at (5.4,2){$y$};
+        \node at (3.4,4.5){$z$};
+        \end{tikzpicture} \hskip -32pt
+        }
+        \vskip -50pt \caption{Omdannelse fra magnetiske momenter til bulk magnetisering ved summation. Antal molekyler i højt-- og lavt energistadie repræsenterer ikke virkeligheden.}
+    \end{figure}
 
     Molekylet der undersøges vil have en række mulige energiniveauer givet ved:
     \[
         n_{\text{energistadier}}=2I+1
     \]
-    Dette er hvad der gør analyse af molekyler med $I=\frac{1}{2}$ (eksempelvis $^1H$, $^{13}C$) specielt fordelagtigt, da det skaber et simpelt tilfælde med 2 mulige energistadier. Stadiernes energi, samt differensen mellem dem kan beskrives ved:
+    Dette er hvad der gør analyse af molekyler med $I=\frac{1}{2}$ (eksempelvis $^1$H, $^{13}$C) specielt fordelagtigt, da det skaber et simpelt tilfælde med 2 mulige energistadier. Stadiernes energi, samt differensen mellem dem kan i det tilfælde beskrives ved:
     \[
-        E_{\text{lav}}=-\frac{1}{2}h\gamma B_0 \hskip 16pt \Delta E=h\gamma B_0 \hskip 16pt E_{\text{høj}}=\frac{1}{2}h\gamma B_0
+        E_{\text{lav}}=-\frac{1}{2}h\gamma B_0 \hskip 32pt \Delta E=h\gamma B_0 \hskip 32pt E_{\text{høj}}=\frac{1}{2}h\gamma B_0
     \]
     Hvor $h$ er Plancks konstant. Det er denne energidifferens der muliggør analysen af molekylerne, da vi ved at udsætte dem for elektromagnetisk stråling med energi svarende til energidifferensen kan forårsage et \textit{spin flip}. Dvs.\ en overgang fra det lave energistadie til det høje. 
-    \begin{figure}[H]\centering
+    \begin{figure}[H]
         \resizebox{\textwidth}{!}{
             \begin{tikzpicture}
                 \draw[-stealth,thick] (0,0) -- (0,5);
@@ -390,29 +462,33 @@
 
     Det er præcis denne præcession der kan måles under analyse, da præcessionen af de ladede atomkerner inducerer en strøm, der kan måles i en spole viklet omkring prøvebeholderen. For at forårsage denne præcession indsendes radiofrekvente bølger, hvis frekvens er omkring $\omega$, i prøven sådan at $B_1 \perp B_0$. 
 
-    Dette medfører at vores bulk magnetiseringsvektor ``tippes'' ud af ækvilibrium, ved at ændre atomernes spin og derved vende deres enkelte magnetiske momenter. Afhængigt af hvor længe prøven udsættes for dette ydre magnetfelt for, desto mere tipper magnetiseringsvektoren.
+    Dette medfører at vores bulk magnetiseringsvektor ``tippes'' ud af ækvilibrium, ved at ændre atomernes spin og derved vende deres enkelte magnetiske momenter. Afhængigt af hvor længe prøven udsættes for dette ydre magnetfelt for, desto mere tipper magnetiseringsvektoren, vinklen er givet ved:
+    \[
+        \theta = \frac{\gamma B_1 \tau \cdot 180}{\pi}
+    \]
+    Hvor $\tau$ er tiden prøven udsættes for $B_1$ og $\gamma$ er det gyromagnetiske forhold.
         \begin{figure}[H]
         \resizebox{\linewidth}{!}{
         \begin{tikzpicture}
             \draw[-stealth,thick,densely dashed] (0,0) -- (4,0) node[right]{$x$}; 
             \draw[-stealth,thick,densely dashed] (0,0) -- (0,4) node[above]{$z$}; 
             \draw[-stealth,thick,densely dashed] (0,0) -- (-2,-3) node[below left]{$y$};
-            \draw[-stealth,ultra thick,cyan] (0,0) -- +(90:3) node[right,cyan]{$\vec{\mu}$};
+            \draw[-stealth,ultra thick,red] (0,0) -- +(90:3) node[right,red]{$M$};
             \draw[-stealth,ultra thick] (0,-3) -- (0,-1) node[right]{$B_0$};
 
             \draw[-stealth,thick,densely dashed] (8,0) -- (11,0) node[right]{$x$}; 
             \draw[-stealth,thick,densely dashed] (8,0) -- (8,4) node[above]{$z$}; 
             \draw[-stealth,thick,densely dashed] (8,0) -- (6,-3) node[below left]{$y$};
-            \draw[-stealth,ultra thick,cyan] (8,0) -- +(45:2) node[right,cyan]{$\vec{\mu}$};
-            \draw[stealth-stealth,thick,red] (8,0.75) to[bend left] node[pos=.25,above right,font=\footnotesize]{$\qty{45}\degree$} (8.4,0.43);
+            \draw[-stealth,ultra thick,red] (8,0) -- +(45:2) node[right]{$M$};
+            \draw[stealth-stealth,thick,cyan] (8,0.75) to[bend left] node[pos=.25,above right,font=\footnotesize]{$\qty{45}\degree$} (8.4,0.43);
             \draw[-stealth,ultra thick] (8,-3) -- (8,-1) node[right]{$B_0$};
             \draw[-stealth,ultra thick] (14,0) -- (12,0) node[below]{$B_1$};
 
             \draw[-stealth,thick,densely dashed] (18,0) -- (22,0) node[right]{$x$}; 
             \draw[-stealth,thick,densely dashed] (18,0) -- (18,4) node[above]{$z$}; 
             \draw[-stealth,thick,densely dashed] (18,0) -- (16,-3) node[below left]{$y$};
-            \draw[stealth-stealth,thick,red] (18,0.75) to[bend left=45,font=\footnotesize] node[pos=.5,above right]{$\qty{90}\degree$} (18.75,0);
-            \draw[-stealth,ultra thick,cyan] (18,0) -- +(0:3) node[below,cyan]{$\vec{\mu}$};
+            \draw[stealth-stealth,thick,cyan] (18,0.75) to[bend left=45,font=\footnotesize] node[pos=.5,above right]{$\qty{90}\degree$} (18.75,0);
+            \draw[-stealth,ultra thick,red] (18,0) -- +(0:3) node[below]{$M$};
             \draw[-stealth,ultra thick] (18,-3) -- (18,-1) node[right]{$B_0$};
             \draw[-stealth,ultra thick] (25,0) -- (23,0) node[below]{$B_1$};
             \node at (2,-4){(a)};
@@ -429,84 +505,44 @@
     \end{itemize}
     Generelt vil $t_1 \geq t_2$, dette er dog ikke en regel, og nedenstående vil derfor ikke altid være sandt, da spin-lattice relaxation tiden ikke altid vil være den begrænsende faktor.
     \[
-        \vec{M}=
+        \overrightarrow{M}=
         \begin{bmatrix}
             0 \\
             0 \\
             z
         \end{bmatrix}
         \stackrel{B_1}{\longrightarrow}
-        \vec{M}=
+        \overrightarrow{M}=
         \begin{bmatrix}
             x \\
             y \\
             0
         \end{bmatrix}
         \stackrel{t_1}{\longrightarrow}
-        \vec{M}=
+        \overrightarrow{M}=
         \begin{bmatrix}
             0 \\
             0 \\
             z
         \end{bmatrix}
     \]
-    I takt med at magnetiseringsvektoren stabiliserer sig selv ved at præcessere, induceres en strøm grundet den spirallignende bevægelse i $xy$-planen, da det svarer til en ladning der bevæger sig. For at tilnærme os bevægelsen, tænker vi på Eulers formel $\in \mathbb{R}^2$, repræsenteret ved dens enkelte komponenter som hhv.\ $x$-- og $y$--koordinaten:
-    \[
-        \overrightarrow{\mu_{\mathbb{R}^2}}=
-        \begin{pmatrix}
-            x \\
-            y
-        \end{pmatrix}=
-        \begin{pmatrix}
-            \sin(x) \\
-            \cos(x)
-        \end{pmatrix}
-    \]
-    Denne funktion producerer i praksis en cirkel i $xy$--planen med ampltiduden 1. Vi går nu fra $\mathbb{R}^2 \rightarrow \mathbb{R}^3$, ved at indføre $x$--værdien som den tredje akse:
-    \[
-        \overrightarrow{\mu_{\mathbb{R}^3}}=
-        \begin{pmatrix}
-            x \\
-            y \\
-            z
-        \end{pmatrix}=
-        \begin{pmatrix}
-            \sin(x) \\
-            \cos(x) \\
-            x
-        \end{pmatrix}
-    \]
-    Ved at multiplicere en skalar på ydersiden af den trigonometriske funktion kan vi medføre at den går mod $0$, samt gøre spiralbevægelsen mere hyppig ved at multiplicere med en skalar inde i den trigonometriske funktion.
-    \[
-        \overrightarrow{\mu_{\mathbb{R}^3}}=
-        \begin{pmatrix}
-            x \\
-            y \\
-            z
-        \end{pmatrix}=
-        \begin{pmatrix}
-            (2\pi-x)\sin(10x) \\
-            (2\pi-x)\cos(10x) \\
-            x
-        \end{pmatrix}
-    \]
-    \begin{figure}[H]\centering
+    I takt med at magnetiseringsvektoren stabiliserer sig selv ved at præcessere, induceres en strøm grundet den spirallignende bevægelse i $xy$-planen, da det svarer til en ladning der bevæger sig.     
+    \begin{figure}[H]
         \resizebox{\linewidth}{!}{
             \resizebox{0.62\linewidth}{!}{
             \begin{tikzpicture}
-                \draw[-stealth,thick,densely dashed] (0,0) -- (4,0) node[right]{$x$}; 
+                \draw[-stealth,thick,densely dashed] (0,0) -- (4,0) node[right]{$y$}; 
                 \draw[-stealth,thick,densely dashed] (0,0) -- (0,4) node[above]{$z$}; 
-                \draw[-stealth,thick,densely dashed] (0,0) -- (-2,-3) node[below left]{$y$};
-                \draw[stealth-stealth,thick,red] (0,0.75) to[bend left=45,font=\footnotesize] node[pos=.5,above right]{$\qty{90}\degree$} (0.75,0);
-                \draw[-stealth,ultra thick,cyan] (0,0) -- (3,0);
-                \node[below,cyan] at (1,0){$\vec{\mu}$};
+                \draw[-stealth,thick,densely dashed] (0,0) -- (-2,-3) node[below left]{$x$};
+                \draw[stealth-stealth,thick,cyan] (0,0.75) to[bend left=45,font=\footnotesize] node[pos=.5,above right]{$\qty{90}\degree$} (0.75,0);
+                \draw[-stealth,ultra thick,red] (0,0) -- (3,0) node[below]{M};
                 \draw[-stealth,ultra thick] (0,-3) -- (0,-1) node[right]{$B_0$};
                 \draw[-stealth,ultra thick] (7,0) -- (5,0) node[below]{$B_1$};
                 \draw[-stealth,thick] (8,0) -- node[pos=.5,anchor=south]{$t_1$} (10,0);
             \end{tikzpicture} \hskip -32pt
             }
             \begin{tikzpicture}
-                \draw[-stealth, ultra thick] (3.4,0) -- (3.4,1.25) node[right]{$B_0$};
+                \draw[-stealth,ultra thick] (3.4,0) -- (3.4,1.25) node[right]{$B_0$};
                 \begin{axis}[
                     view={-45}{-35},
                     axis lines=center,
@@ -526,19 +562,21 @@
                     samples=400,
                     samples y=0,
                     mark=none,
-                    cyan,
+                    opacity=.5,
+                    red,
                 ] ({(2*pi-x)*sin(10*deg(x))},{(2*pi-x)*cos(10*deg(x))},{x});
+                \draw[-stealth,thick,red,solid] (axis cs:0,0,0) -- (axis cs:0,0,2*pi) node[right,font=\footnotesize]{$M$};
             \end{axis}
 
-            \node at (1.3,0.8){$x$};
-            \node at (5.5,0.75){$y$};
+            \node at (5.5,0.75){$x$};
+            \node at (1.3,0.8){$y$};
             \node at (3.4,4.7){$z$};
         \end{tikzpicture}
         }
         \caption{Illustration af afslappelse fra exciteret tilstand ved præcession.}
     \end{figure}
     Grafen der dannes med udgangspunkt i den inducerede strøm kaldes \textit{FID}  (free induction decay), og giver os et eksponentielt faldende oscillerende signal, der ved Fourier transformation kan flyttes fra tidsdomænet, til frekvensdomænet \parencite{Davi2022}.
-    \begin{figure}[H]\centering
+    \begin{figure}[H]
         \includegraphics[width=\textwidth]{billeder/fourier}
         \caption{Eksempler på omdannelser fra FID-grafer til NMR-spektra.}
     \end{figure}
@@ -549,7 +587,7 @@
     \[
         \delta = \frac{\omega_{\text{prøve}}-\omega_{\text{TMS}}}{\omega_{\text{TMS}}}
     \]
-    Hvis enhed er \textit{ppm} da $\omega_{\text{TMS}}$ normal angives i MHz og  $\omega_{\text{prøve}}$ i Hz. I nyere tid er det dog også blevet normalt at benytte opløsningsmidlets kemiske skift som en standard, og det noteres derfor altid med spektret. Umiddelbart lader det dog til at dette ville medføre at alle protonerne ville have ækvivalente kemiske skift, dette er dog ikke tilfældet, da de alle påvirkes af det ydre magnetiske felt forskellige grundet beskyttelse mod det grundet elektronerne der befinder sig omkring protonerne, eftersom elektroner per definition har et spin $I=\frac{1}{2}$, hvorved de danner et modsatrettet magnetfelt der skaber intereferens.
+    Hvis enhed er \textit{ppm} (parts--per--million) da $\omega_{\text{TMS}}$ normalt angives i MHz og  $\omega_{\text{prøve}}$ i Hz. I nyere tid er det dog også blevet normalt at benytte opløsningsmidlets kemiske skift som en standard, og det noteres derfor altid med spektret. Umiddelbart lader det dog til at dette ville medføre at alle protonerne ville have ækvivalente kemiske skift, dette er dog ikke tilfældet, da de alle påvirkes af det ydre magnetiske felt forskellige grundet beskyttelse mod det grundet elektronerne der befinder sig omkring protonerne, eftersom elektroner per definition har et spin $I=\frac{1}{2}$, hvorved de danner et modsatrettet magnetfelt der skaber intereferens.
 
     For at identificere protoner der vil have forskellige grader af beskyttelse grundet deres lokale elektrondensitet undersøges de \textit{kemiske miljøer} der er tilstede i molekylet, dvs: ``hvilke protoner vil have den samme mængde beskyttelse mod det ydre magnetfelt''? Dette afhænger af molekylets symmetri. Et simpelt eksempel herpå et alkener:
     \begin{figure}[H]\centering
@@ -572,25 +610,27 @@
     \subsubsection{IR--spektroskopi}
     Infrarød spektroskopi er en mindre selektiv spektroskopisk metode end H--NMR. Dog giver det stadig mulighed for identifikation af visse aspekter af et givent molekyle, hovedsageligt i form af funktionelle grupper.
 
-    Under IR--spektroskopi bestråles en prøve med infrarøde bølger, hvis de præcist matcher enegidifferensen mellem molekylets grundstaide og exciterede stadie, sker der et spring i energistadie:
+    Ligesom i NMR--spektroskopi er det nødvendigt for molekylet man ønsker at undersøge at have et magnetisk moment. Dvs.\ at undersøgelse af symmetriske (H$_2$, N$_2$, O$_2$, osv.)-- samt monoatomige molekyler \textit{ikke} er muligt, da deres magnetiske momenter enten vil udligne hinanden eller ikke eksistere.
+
+    Under IR--spektroskopi bestråles en prøve med infrarøde bølger. Hvis de præcist matcher enegidifferensen mellem molekylets grundstaide og exciterede stadie, sker der et spring i energistadie:
     \[
         \Delta E_{1 \rightarrow 2}
     \]
-    Hvilket får dem til at vibrere. Disse vibrationer manifesterers som en fjederlignende bevægelse af det kovalente bånd mellem molekylerne, hvilket ligesom i NMR medfører en ændring i molekylets magnetiske moment, der kan måles. Afhængigt af molekylstrukturen er der dog flere forskellige muligheder for vibrationer:
+    hvilket får dem til at vibrere. Disse vibrationer manifesterers som en gentagen bevægelse af det kovalente bånd mellem atomerne, hvilket ligesom i NMR medfører en ændring i molekylets magnetiske moment der kan måles. Afhængigt af molekylstrukturen er der dog flere forskellige muligheder for vibrationer:
     \begin{table}[H]\center
         \caption{Mulige strækninger for molekyler af forskellige strukture.}
-        \begin{tabular*}{\linewidth}{c@{\extracolsep{\fill}}cccc}
+        \begin{tabular}{ccccc}
             \toprule
             & \multicolumn{2}{c}{Symmetrisk} & \multicolumn{2}{c}{Asymmetrisk} \\
             \cmidrule(r){2-3} \cmidrule(r){4-5}
             & Bøjning & Strækning & Bøjning & Strækning \\
             \midrule
-            Monoatomig & \times & \times & \times & \times \\
-            Diatomig & \times & \checkmark & \times & \times \\
-            Triatomig & \checkmark & \checkmark & \checkmark & \checkmark \\
-            Polyatomig & \checkmark & \checkmark & \checkmark & \checkmark \\
+            Monoatomig & $\times$ & $\times$ & $\times$ & $\times$ \\
+            Diatomig & $\times$ & $\checkmark$ & $\times$ & $\times$ \\
+            Triatomig & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+            Polyatomig & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
             \bottomrule
-        \end{tabular*} 
+        \end{tabular}
     \end{table}
     I tilfældet med diatomige molekyler det simpelt at illustrere den mulige vibration da det kovalente bånd mellem dem udelukkende kan strækkes eller komprimeres, hvilket medfører en fjeder--lignende vibration.
     \begin{figure}[H]\centering
@@ -604,7 +644,7 @@
         \caption{Kovalent bånd i diatomigt molekyle illustreret som fjeder.}
     \end{figure}
     For polyatomige molekyler bliver vibrationsmulighederne mere komplekse. Med udgangspunkt i triatomige molekyler kan mulighederne for de enkelte bånd dog illusteres. I takt med at flere atomer tilføjes kan vibrationerne dog kombineres på forskellige måder, samt påvirke hinanden, hvilket medfører en uendelig mængde mulige vibrationer.
-    \begin{figure}[H]\centering
+    \begin{figure}[H]
         \resizebox{\linewidth}{!}{
             \begin{tikzpicture}
                 \node[circle,draw,minimum size=2cm,thick] (A) at (0,0){};
@@ -633,7 +673,7 @@
         \caption{Symmetrisk-- og asymmetrisk strækning af kovalente bånd i triatomigt molekyle.}
     \end{figure}
     
-    \begin{figure}[H]\centering
+    \begin{figure}[H]
         \resizebox{\linewidth}{!}{
             \begin{tikzpicture}
                 \node[circle,draw,minimum size=2cm,thick] (a) at (0,0){};
@@ -661,4 +701,15 @@
         }
         \caption{Symmetrisk-- og asymmetrisk bøjning af kovalente bånd i triatomigt molekyle.}
     \end{figure}
-    Bøjninger kan ske både i eget plan og vinkelret derpå. Dvs.\ at atomerne ikke udelukkende har mulighed for at bøje fra side til side, men også frem og tilbage. 
+    Bøjninger kan ske både i eget plan og vinkelret derpå. Dvs.\ at atomerne ikke udelukkende har mulighed for at bøje fra side til side, men også frem og tilbage. Derudover bevæger det centrale molekyle sig også, da molekylets massemidtpunkt \textit{ikke} kan forskydes af vibrationerne.
+
+    Indenfor IR--spektroskopi indføres et nyt mål for bølgelængden, \textit{bølgenummeret}, givet ved:
+    \[
+        \nu=\lambda^{-1}
+    \]
+    Med udgangspunkt i disse opdeles IR--området i 3 forskellige ``zoner'' \parencite{Shah2018}:
+    \begin{itemize}
+        \item[1)] Tæt--IR, $\nu \in \left[14000-4000\si{cm^{-1}}\right]$
+        \item[2)] Mellem--IR, $\nu \in \left[4000-400\si{cm^{-1}}\right]$
+        \item[3)] Lang--IR, $\nu \in \left[400-40\si{cm^{-1}}\right]$
+    \end{itemize}
