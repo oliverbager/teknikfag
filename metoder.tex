@@ -122,36 +122,98 @@
     
 
     \subsection{Hæmningsforsøg}
-    
+    Et hæmningsforsøg udføres også for at undersøge parabenernes hæmmende vækst på forskellige bakterier.Med udgangspunkt i litteraturen er det klart at parabener er mere effektive mod Gram--positive end Gram--negative bakterier \parencite{Joao2021}. Derudover har tidligere studier undersøgt de effektive koncentrationer for væksthæmning ved de forskellige parabener for bakteriearterne \parencite{Wies2019}. 
 
-    \subsubsection{Mueller--Hinton}
-    Et hæmningsforsøg udføres også for at undersøge parabenernes hæmmende vækst på forskellige bakterier. Til dette formål vælges det at undersøge 3 forskellige bakterier:
+    Grundet dette undersøges 2 forskellige bakterier, \textit{bacilius cereus} og \textit{escherichia coli}, for at muliggøre undersøgelse af både et gram--positivt og gram--negativt bakterie:
     \begin{table}[H]\centering
-        \caption{Karakteristika og navn på udvalgte baktierier.}
-        \begin{tabular}{ccc}
+        \caption{Karakteristika, MIC og navn på udvalgte baktierier.}
+        \begin{tabular}{cccc}
             \toprule
-            Bakterieart & Cellevægsstruktur \\
+            & & \multicolumn{2}{c}{MIC $\left[\si{W\per W}\right]$} \\
+            \cmidrule(r){3-4}
+            Bakterieart & Cellevægsstruktur & Ethylparaben & Propylparaben \\
             \midrule
-            \textit{bacilius cereus} & Gram--positiv \\
-            \textit{escherichia coli} & Gram--negativ \\
-            \textit{serratia marcescnes} & Gram-negativ \\
+            \textit{bacillus cereus} & Gram--positiv & 0.1 & 0.125 \\
+            \textit{escherichia coli} & Gram--negativ & 0.1--0.125 & 0.05--0.1 \\
             \bottomrule
         \end{tabular}
     \end{table}
-    Med udgangspunkt i litteraturen er det klart at parabener er mere effektive mod Gram--positive end Gram--negative bakterier \parencite{Joao2021}. Derudover har tidligere studier undersøgt de effektive koncentrationer for væksthæmning ved de forskellige parabener for bakteriearterne \parencite{Wies2019}. 
-    \begin{table}[H]\centering
-        \caption{Mindste inhibitoriske parabenkoncentration for hæmning af relevante bakterier.}
-        \begin{tabular}{ccc}
-            \toprule
-            & \multicolumn{2}{c}{MIC $\left[\si{w\per w}\right]$} \\
-            \cmidrule(r){2-3}
-            Bakterieart & Ethylparaben & Propylparaben \\
-            \midrule
-            \textit{bacilius cereus} &  0.1 & 0.125 \\
-            \textit{escherichia coli} & 0.1--0.125 & 0.05--0.1 \\
-            \textit{serratia marcescens} & 0.049 & 0.04 \\ 
-            \bottomrule
-        \end{tabular}
-    \end{table}
+    
+    \subsubsection{Agar--diffusion}
+    I laboratorier benyttes agar--diffusion til at afprøve og sammenligne forskellige antibiotikas effekt på en isoleret bakteriekultur. Dette gøres ved at opløse antibiotikaet i et passende opløsningsmiddel som papirdiske derefter vædes i. Disse spredes over en Muller--Hinton--agarplade podet med bakteriearten man ønsker at undersøge, og stilles så til inkubering. Antibiotikaet der befinder sig i papirdisken vil \textit{diffundere}, dvs.\ vandre fra papirdisken og ud i agaren, hvilket medfører ad der vil være en radius omkring disken hvor der ingen vækst er.
+    \begin{figure}[H]\centering
+        \begin{tikzpicture}
+            \filldraw[very thick,fill=yellow!10] (0,0) node(a){} circle (2);
+            \filldraw[very thick,fill=yellow!10] (6,0) node(b){} circle (2);
+
+            \draw[-stealth,thick] (2.5,0) -- node[above]{tid} (3.5,0);
+
+            \foreach \x in {45,135,-45,-135}
+                \filldraw[fill=gray!5, fill opacity=.75,ultra thin] (b)+(\x:1) circle (0.5);
+
+            \foreach \x in {a,b}
+                \foreach \y in {45,135,-45,-135}
+                \filldraw[fill=white] (\x)+(\y:1) circle (0.2);
+        \end{tikzpicture}
+        \caption{Diffusion af stof indeholdt i papirdiske.}
+    \end{figure}
+    Den vækstfrie radius vil afhænge af antibiotikaens effektivitet, da koncentrationen vil falde i takt med at stoffet diffunderer når længere og længere ud. Med udgangspunkt heri kan et kvalitativt gæt på den minimum inhibitoriske koncentration opstilles.
+    \begin{figure}[H]\centering
+        \begin{tikzpicture}
+            \filldraw[very thick,fill=yellow!10] (0,0) node(a){} circle (2);
+
+
+            \draw[-stealth,thick] (2.5,0) -- node[above]{vækst} (3.5,0);
+
+            \filldraw[very thick,fill=yellow!10] (6,0) node(b){} circle (2);
+
+            \filldraw[pattern={Lines[angle=45,distance=1.5mm]},pattern color=black] (6,0) circle (1.99);
+
+            \filldraw[fill=yellow!10,very thin] (b)+(45:1) circle (0.3);
+            \filldraw[fill=yellow!10,very thin] (b)+(135:1) circle (0.75);
+            \filldraw[fill=yellow!10,very thin] (b)+(-135:1) circle (0);
+            \filldraw[fill=yellow!10,very thin] (b)+(-45:1) circle (0.5);
+
+            \foreach \x in {a,b}
+                \foreach \y in {45,135,-45,-135}
+                \filldraw[fill=white] (\x)+(\y:1) circle (0.2);
+
+            \node[font=\footnotesize] at (.71,.71) {$c$};
+            \node[font=\footnotesize] at (.71,-.71) {$d$};
+            \node[font=\footnotesize] at (-.71,.71) {$a$};
+            \node[font=\footnotesize] at (-.71,-.71) {$b$};
+
+            \node[font=\footnotesize] at (6.71,.71) {$c$};
+            \node[font=\footnotesize] at (6.71,-.71) {$d$};
+            \node[font=\footnotesize] at (5.29,.71) {$a$};
+            \node[font=\footnotesize] at (5.29,-.71) {$b$};
+
+        \end{tikzpicture}
+        \caption{Illustration af hæmningsradius. MIC: $b>c>d>a$.}
+    \end{figure}
+    Det samme princip benyttes her med parabenerne. En relativt koncentreret parabenopløsning bestående af ethanol og paraben fremstilles hvorefter de sterile papirdiske vædes deri, de stilles herefter til tørring for at minimere ethanolens egen bakteriehæmmende virkning. Papirdiskene placeres på en poddet Hueller--Minton--agarplade, hvorefter de let præsses ned på agarpladen med en flamme--steriliseret pincet for at sikre overfladekontakt. Pladerne stilles herefter til inkubering natten over, hvorefter radius af de hæmmende zoner måles.
 
     \subsubsection{Fortyndingsrække}
+    Modsat agar--diffusion benyttes fortyndingsrækker til at bestemme definitive værdier for den minimale inhibitoriske koncentration for forskellige antibakterielle midler (antibiotika, konserveringsmidler, osv.). 
+
+    Dette gøres ved at opstille en fortyndingsrække i et bakteriefyldt medie med det antibaktierelle stof man ønsker at undersøge. Ved at have forskellige koncentrationer af stoffet, og herefter følge udviklingen i OD600 over tid, kan man undersøge hvordan de forskellige koncentrationer påvirker bakterievæksten.
+    aaaaaaaaa
+    \begin{figure}[H]\centering
+        \begin{tikzpicture}
+            \fill[blue!100] (0,0) rectangle ++(0.4,1) (0,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!87.5] (1.7,0) rectangle ++(0.4,1) (1.7,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!75] (3.4,0) rectangle ++(0.4,1) (3.4,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!62.5] (5.1,0) rectangle ++(0.4,1) (5.1,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!50] (6.8,0) rectangle ++(0.4,1) (6.8,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!37.5] (8.5,0) rectangle ++(0.4,1) (8.5,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!25] (10.2,0) rectangle ++(0.4,1) (10.2,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!12.5] (11.9,0) rectangle ++(0.4,1) (11.9,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \foreach \x in {0,1.7,...,11.9}{
+                \draw[thick] (\x,0) --  ++(0,2);
+                \draw[thick] ($(\x+0.4,0)$) -- ++(0,2);
+                \draw[-,thick] (\x,0) to[bend right=90,looseness=1.75] ++(0.4,0);
+                \draw[thick] ($(\x+0.2,2)$) ellipse (.2 and .1);
+            }
+            }
+        \end{tikzpicture}
+    \end{figure}
