@@ -113,13 +113,24 @@
         
 
     \subsection{Smeltepunktsbestemmelse}
-    
+    Smeltepunktsbestemmelsen udføres først med udgangspunkt i et kommercielt indkøbt produkt for at have et teoretisk smeltepunkt hvilket gør det muligt at på forhånd undgå systematiske afvigelser. En smule af de kommercielt købte produkter stampes op i et lukket kapillærrør, hvorefter det ``droppes'' gentagne gange for at komprimere produktet. Det placeres nu i smeltepunktsbestemmelsesapparetet, som varmes op til en temperatur $10\si{\degree C}$ lavere end det forventede smeltepunkt, hvorefter vi langsomt varmer op indtil produktet smelter.
+    \begin{figure}[H]\centering
+        \caption{Teoretisk smeltepunkt for ethyl-- og propylparaben.}
+        \begin{tabular}{ccc}
+            \toprule
+            & Ethylparaben & Propylparaben \\
+            \midrule
+            Smeltepunkt $\left[\si{\degree C}\right]$ & 117 & 97 \\
+            \bottomrule
+        \end{tabular}
+    \end{figure}
+    Disse værdier benyttes fremadrettet som gældende tabelværdier. Prøven udføres nu på samme måde med produkterne fremstillet ved syntese for at muliggøre sammenligning af deres smeltepunkt.
 
     \subsection{NMR--spektroskopi}
-    
+    Prøven sendes til Aarhus Universitet som udfører analysen.
 
     \subsection{IR--spektroskopi}
-    
+    Prøven sendes til Aarhus Universitet som udfører analysen.
 
     \subsection{Hæmningsforsøg}
     Et hæmningsforsøg udføres også for at undersøge parabenernes hæmmende vækst på forskellige bakterier.Med udgangspunkt i litteraturen er det klart at parabener er mere effektive mod Gram--positive end Gram--negative bakterier \parencite{Joao2021}. Derudover har tidligere studier undersøgt de effektive koncentrationer for væksthæmning ved de forskellige parabener for bakteriearterne \parencite{Wies2019}. 
@@ -197,7 +208,7 @@
     Modsat agar--diffusion benyttes fortyndingsrækker til at bestemme definitive værdier for den minimale inhibitoriske koncentration for forskellige antibakterielle midler (antibiotika, konserveringsmidler, osv.). 
 
     Dette gøres ved at opstille en fortyndingsrække i et bakteriefyldt medie med det antibaktierelle stof man ønsker at undersøge. Ved at have forskellige koncentrationer af stoffet, og herefter følge udviklingen i OD600 over tid, kan man undersøge hvordan de forskellige koncentrationer påvirker bakterievæksten.
-    \begin{figure}[H]\centering
+    \begin{figure}[h]\centering
         \begin{tikzpicture}
             \fill[blue!99.9] (-3,.5) rectangle ++(1,-.5) (-3,0) to[bend right=90,looseness=1.25] (-2,0) (-2.5,.5) ellipse (.5 and .2);
             \fill[blue!88.8] (0,0) rectangle ++(0.4,0.5) (0,0) to[bend right=90, looseness=1.75] ++(0.4,0);
@@ -209,12 +220,12 @@
             \fill[blue!22.2] (7.5,0) rectangle ++(0.4,0.5) (7.5,0) to[bend right=90, looseness=1.75] ++(0.4,0);
             \fill[blue!11.1] (8.75,0) rectangle ++(0.4,0.5) (8.75,0) to[bend right=90, looseness=1.75] ++(0.4,0);
             
-            \draw[-,thick] (-3,1.5) -- (-3,0) (-2,0) -- (-2,1.5) (-3,0) to[bend right=90,looseness=1.25] node[below]{Parabenopløsning} (-2,0) (-3,0) to[bend left=90,looseness=1.25,opacity=.5] (-2,0);
-            \draw[thick] (-2.5,1.5) ellipse (0.5 and 0.25) node(a)[above];
+            \draw[-,thick] (-3,1.5) -- (-3,0) (-2,0) -- (-2,1.5) (-3,0) to[bend right=90,looseness=1.25] node[below]{parabenopløsning} (-2,0) (-3,0) to[bend left=90,looseness=1.25,opacity=.5] (-2,0);
+            \draw[thick] (-2.5,1.5) ellipse (0.5 and 0.25) node(a)[above]{};
             \draw[thick,opacity=.4] (-2.5,.5) ellipse (.5 and .2);
-            \draw[-stealth,thick] (a) to[bend left=75,looseness=1.25] node[above,font=\footnotesize]{$100\si{\mu L}$} (0,2.25)
+            \draw[-stealth,thick] (a) to[bend left=75,looseness=1.25] node[above,font=\footnotesize]{$100\si{\mu l}$} (0,2.25)
 
-            \draw[-,densely dotted,thick] (-.5,.5) node[left,font=\footnotesize]{$100\si{\mu L}$} --  (9.65,.5);
+            \draw[-,densely dotted,thick] (-.5,.5) node[left,font=\footnotesize]{$100\si{\mu l}$} --  (9.65,.5);
             
             \foreach \x in {0,1.25,...,8.75}{
                 \draw[thick] (\x,0) --  ++(0,2);
@@ -224,19 +235,19 @@
             }
 
             \foreach \x in {0.4,1.65,...,8.25}
-            \draw[-stealth,thick] (\x,2.25) to[bend left=90,looseness=1.25] node[above,font=\footnotesize]{$100\si{\mu L}$} ++(.85,0);
+            \draw[-stealth,thick] (\x,2.25) to[bend left=90,looseness=1.25] node[above,font=\footnotesize]{$100\si{\mu l}$} ++(.85,0);
             }
         \end{tikzpicture}
-        \caption{Fortynding ved gentagen overførsel fra brønd til brønd.}
+        \caption{fortynding ved gentagen overførsel fra brønd til brønd.}
     \end{figure}
 
     Dette medfører en halvering af koncentrationen fra brønd til brønd beskrevet ved rekursionsligningen:
     \[
         c_n=c_{\text{opløsning}}\cdot 0.5^n, n \in \left\{1,2,3,...,n\right\}
     \]
-    Vi opstiller nu en fortyndingsrække hvor den 6.\ brønd svarer til MIC
+    Vi opstiller nu en fortyndingsrække hvor den 7.\ brønd svarer til den højeste teoretiske MIC:
     \[
-        1.25\si{mg\per mL}=c_{\text{opløsning}}\cdot 0.5^6 \Leftrightarrow c_{\text{opløsning}}=\frac{1.25\si{mg\per mL}}{0.5^6}=80\si{mg\per mL}
+        1.25\si{mg\per mL}=c_{\text{opløsning}}\cdot 0.5^7 \Leftrightarrow c_{\text{opløsning}}=\frac{1.25\si{mg\per mL}}{0.5^7}=160\si{mg\per mL}
     \]
     Da det er nødvendigt at vente på at ethanolen fordamper, ønsker vi at nå den nødvendige koncentration med så lille en mængde ethanol som muligt. En mættet opløsning af ethylparaben i ethanol indeholder $550\si{mg\per mL}$, dvs.\ at det må være nødvendigt at overføre:
     \[
@@ -248,8 +259,92 @@
     \[
         160\si{mg}=746\si{mg\per mL} \cdot V_{\text{ethanol}} \Leftrightarrow V_{\text{ethanol}}=\frac{160\si{mg}}{746\si{mg\per mL}}=210\si{\mu L}
     \]
-    Altså benyttes $21\si{\mu L}$ under opstillingen af propylfortyndingsrækken.
+    Altså benyttes $21\si{\mu L}$ under opstillingen af propylfortyndingsrækken, hvilket vil resultere i koncentrationer givet ved:
+    \begin{figure}[H]\centering
+        \begin{tikzpicture}[scale=.76,every node/.style={scale=.76}]
+            \fill[blue!100] (-3,.5) rectangle ++(1,-.5) (-3,0) to[bend right=90,looseness=1.25] (-2,0) (-2.5,.5) ellipse (.5 and .2);
+            \fill[blue!92.3] (0,0) rectangle ++(0.4,0.5) (0,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!84.6] (1.25,0) rectangle ++(0.4,0.5) (1.25,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!76.9] (2.5,0) rectangle ++(0.4,0.5) (2.5,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!69.2] (3.75,0) rectangle ++(0.4,0.5) (3.75,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!61.5] (5,0) rectangle ++(0.4,0.5) (5,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!53.8] (6.25,0) rectangle ++(0.4,0.5) (6.25,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!46.2] (7.5,0) rectangle ++(0.4,0.5) (7.5,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!38.5] (8.75,0) rectangle ++(0.4,0.5) (8.75,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!30.8] (10,0) rectangle ++(0.4,0.5) (10,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!23.1] (11.25,0) rectangle ++(0.4,0.5) (11.255,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!15.4] (12.5,0) rectangle ++(0.4,0.5) (12.5,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!7.7] (13.75,0) rectangle ++(0.4,0.5) (13.75,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            
+            \draw[-,thick] (-3,1.5) -- (-3,0) (-2,0) -- (-2,1.5) (-3,0) to[bend right=90,looseness=1.25] node(a)[below,font=\footnotesize]{$160\si{mg\per mL}$} (-2,0) (-3,0) to[bend left=90,looseness=1.25,opacity=.5] (-2,0);
+            \draw[thick] (-2.5,1.5) ellipse (0.5 and 0.25) node(a)[above]{};
+            \draw[thick,opacity=.4] (-2.5,.5) ellipse (.5 and .2);
+            \draw[-stealth,thick] (a) to[bend left=75,looseness=1.25] node[above,font=\footnotesize]{$100\si{\mu l}$} (0,2.25)
 
+            \draw[-,densely dotted,thick] (-.5,.5) node[left,font=\footnotesize]{$100\si{\mu l}$} --  (14.65,.5);
+            \draw[decorate,decoration={brace}] (14.25,-.75) -- node[below]{koncentration $\left[\si{mg\per mL}\right]$} (-.1,-.75);
+            
+            \foreach \x in {0,1.25,...,13.75}{
+                \draw[thick] (\x,0) --  ++(0,2);
+                \draw[thick] ($(\x+0.4,0)$) -- ++(0,2);
+                \draw[-,thick] (\x,0) to[bend right=90,looseness=1.75] ++(0.4,0);
+                \draw[thick] ($(\x+0.2,2)$) ellipse (.2 and .1);
+            }
+
+            \foreach \x in {0.4,1.65,...,13.25}
+            \draw[-stealth,thick] (\x,2.25) to[bend left=90,looseness=1.25] node[above,font=\footnotesize]{$100\si{\mu l}$} ++(.85,0);
+            }
+            \node[font=\scriptsize] at (0.2,-.45){$80$}
+            \node[font=\scriptsize] at (1.45,-.45){$40$}
+            \node[font=\scriptsize] at (2.7,-.45){$20$}
+            \node[font=\scriptsize] at (3.95,-.45){$10$}
+            \node[font=\scriptsize] at (5.2,-.45){$5$}
+            \node[font=\scriptsize] at (6.45,-.45){$2.5$}
+            \node[font=\scriptsize] at (7.70,-.45){$1.25$}
+            \node[font=\scriptsize] at (8.95,-.45){$0.63$}
+            \node[font=\scriptsize] at (10.2,-.45){$0.31$}
+            \node[font=\scriptsize] at (11.45,-.45){$0.16$}
+            \node[font=\scriptsize] at (12.70,-.45){$0.078$}
+            \node[font=\scriptsize] at (13.95,-.45){$0.039$}
+        \end{tikzpicture}
+        \caption{Koncentrationer i ELISA--brønde afrundet til 2 decimaler.}
+    \end{figure}
     Efter ethanolen i brøndene er fordampet er vi efterladt med de korresponderende mængder af paraben. Måling af MIC ved svært opløselige produkter kan være svært, da det i praksis medfører at vi vil have et lag uopløst paraben liggende i bunden af brønden, selv ved MIC i teorien da den befinder sig over begge parabeners opløselighed i vand. 
 
-    Dog er der nogle faktorere der medfører at opløseligheden ``stiger'' i praksis. Bl.a. parabenernes evne til at reagere med de lipide bakteriecellemembraner, hvilket medfører en større opløselighed i mediet, samt at OD600--målingerne foregår ved højere temperatur (inkubationstemperatur, $37\si{\degree C}$) end stuetemperatur.
+    Dog er der nogle faktorere der medfører at opløseligheden ``stiger'' i praksis. Bl.a. parabenernes evne til at reagere med de lipide bakteriecellemembraner, hvilket medfører en større opløselighed i mediet, samt at OD600--målingerne foregår ved højere temperatur (inkubationstemperatur, $30\si{\degree C}$) end stuetemperatur.
+
+    ELISA--pladerne er delt op i 8 rækker af 12 brønde. Vi benytter her række 1 og 5 til kontrol, 2 og 3 til \textit{bacillus cereus} med hhv.\ ethylparaben og propylparaben, samt 6 og 7 til \textit{escherichia coli}, igen med ethyl-- og propylparaben.
+    \begin{figure}[H]\centering
+        \resizebox{\linewidth}{!}{
+        \begin{tikzpicture}
+            \draw[thick] (0,0) rectangle (13,9);
+            \foreach \x in {1,2,...,12}
+                \foreach \y in {4,8}
+                \filldraw[green] (\x,\y) circle (0.35);
+            \foreach \x in {1,2,...,12}
+                \foreach \y in {2,6}
+                \filldraw[blue] (\x,\y) circle (0.35);
+            \foreach \x in {1,2,...,12}
+                \foreach \y in {3,7}
+                \filldraw[red] (\x,\y) circle (0.35);
+            \foreach \x in {1,2,...,12}
+                \foreach \y in {1,5}
+                \filldraw[black] (\x,\y) circle (0.35);
+            \foreach \x in {1,2,...,12}
+                \foreach \y in {1,2,...,8}
+                    \draw (\x,\y) circle (0.35);
+            \draw[decoration={brace},thick,decorate] (-.5,1.65) -- node[left]{\textit{e. coli}} (-.5,3.35);
+            \draw[decoration={brace},thick,decorate] (-.5,5.65) -- node[left]{\textit{b. cereus}} (-.5,7.35);
+            \filldraw[black] (13.5,6.5) circle (.1) node[right]{tom};
+            \filldraw[blue] (13.5,7) circle (.1) node[right]{propylparaben};
+            \filldraw[red] (13.5,7.5) circle (.1) node[right]{ethylparaben};
+            \filldraw[green] (13.5,8) circle (.1) node[right]{kontrol};
+            \draw[-stealth,thick] (1,-.5) -- node[below]{koncentration falder} (12,-.5);
+
+        \end{tikzpicture}
+        }
+        \caption{Skematisk illustration af ELISA--opstilling.}
+    \end{figure}
+    Pladen placeres i ELISA--readeren hvorefter der udføres absorbtionsmålinger ved $595\si{nm}$ (ca.\ OD600) hver 15.\ minut over 20 timer. Dette gør det muligt for os at følge bakterievæksten, og derved undersøge hvilken indvirkning parabenerne har derpå. Med udgangspunkt heri bestemmes den mindste inhibitoriske koncentration, dvs.\ den laveste koncentration af parabener der eliminerer mikroorganisme vækst.
+
+    Umiddelbart har vi forventninger til nogle afvigende målinger i brøndene med højeste koncentrationer, da parabenen ikke kan holdes opløst og derfor vil ophobe sig på bunden af brøndene, hvilket vil gøre det nødvendigt at rydde op i de indsamlede data.
