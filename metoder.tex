@@ -129,7 +129,7 @@
         \caption{Karakteristika, MIC og navn på udvalgte baktierier.}
         \begin{tabular}{cccc}
             \toprule
-            & & \multicolumn{2}{c}{MIC $\left[\si{W\per W}\right]$} \\
+            & & \multicolumn{2}{c}{MIC $\left[\si{W\per W\%}\right]$} \\
             \cmidrule(r){3-4}
             Bakterieart & Cellevægsstruktur & Ethylparaben & Propylparaben \\
             \midrule
@@ -197,23 +197,59 @@
     Modsat agar--diffusion benyttes fortyndingsrækker til at bestemme definitive værdier for den minimale inhibitoriske koncentration for forskellige antibakterielle midler (antibiotika, konserveringsmidler, osv.). 
 
     Dette gøres ved at opstille en fortyndingsrække i et bakteriefyldt medie med det antibaktierelle stof man ønsker at undersøge. Ved at have forskellige koncentrationer af stoffet, og herefter følge udviklingen i OD600 over tid, kan man undersøge hvordan de forskellige koncentrationer påvirker bakterievæksten.
-    aaaaaaaaa
     \begin{figure}[H]\centering
         \begin{tikzpicture}
-            \fill[blue!100] (0,0) rectangle ++(0.4,1) (0,0) to[bend right=90, looseness=1.75] ++(0.4,0);
-            \fill[blue!87.5] (1.7,0) rectangle ++(0.4,1) (1.7,0) to[bend right=90, looseness=1.75] ++(0.4,0);
-            \fill[blue!75] (3.4,0) rectangle ++(0.4,1) (3.4,0) to[bend right=90, looseness=1.75] ++(0.4,0);
-            \fill[blue!62.5] (5.1,0) rectangle ++(0.4,1) (5.1,0) to[bend right=90, looseness=1.75] ++(0.4,0);
-            \fill[blue!50] (6.8,0) rectangle ++(0.4,1) (6.8,0) to[bend right=90, looseness=1.75] ++(0.4,0);
-            \fill[blue!37.5] (8.5,0) rectangle ++(0.4,1) (8.5,0) to[bend right=90, looseness=1.75] ++(0.4,0);
-            \fill[blue!25] (10.2,0) rectangle ++(0.4,1) (10.2,0) to[bend right=90, looseness=1.75] ++(0.4,0);
-            \fill[blue!12.5] (11.9,0) rectangle ++(0.4,1) (11.9,0) to[bend right=90, looseness=1.75] ++(0.4,0);
-            \foreach \x in {0,1.7,...,11.9}{
+            \fill[blue!99.9] (-3,.5) rectangle ++(1,-.5) (-3,0) to[bend right=90,looseness=1.25] (-2,0) (-2.5,.5) ellipse (.5 and .2);
+            \fill[blue!88.8] (0,0) rectangle ++(0.4,0.5) (0,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!77.7] (1.25,0) rectangle ++(0.4,0.5) (1.25,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!66.6] (2.5,0) rectangle ++(0.4,0.5) (2.5,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!55.5] (3.75,0) rectangle ++(0.4,0.5) (3.75,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!44.4] (5,0) rectangle ++(0.4,0.5) (5,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!33.3] (6.25,0) rectangle ++(0.4,0.5) (6.25,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!22.2] (7.5,0) rectangle ++(0.4,0.5) (7.5,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            \fill[blue!11.1] (8.75,0) rectangle ++(0.4,0.5) (8.75,0) to[bend right=90, looseness=1.75] ++(0.4,0);
+            
+            \draw[-,thick] (-3,1.5) -- (-3,0) (-2,0) -- (-2,1.5) (-3,0) to[bend right=90,looseness=1.25] node[below]{Parabenopløsning} (-2,0) (-3,0) to[bend left=90,looseness=1.25,opacity=.5] (-2,0);
+            \draw[thick] (-2.5,1.5) ellipse (0.5 and 0.25) node(a)[above];
+            \draw[thick,opacity=.4] (-2.5,.5) ellipse (.5 and .2);
+            \draw[-stealth,thick] (a) to[bend left=75,looseness=1.25] node[above,font=\footnotesize]{$100\si{\mu L}$} (0,2.25)
+
+            \draw[-,densely dotted,thick] (-.5,.5) node[left,font=\footnotesize]{$100\si{\mu L}$} --  (9.65,.5);
+            
+            \foreach \x in {0,1.25,...,8.75}{
                 \draw[thick] (\x,0) --  ++(0,2);
                 \draw[thick] ($(\x+0.4,0)$) -- ++(0,2);
                 \draw[-,thick] (\x,0) to[bend right=90,looseness=1.75] ++(0.4,0);
                 \draw[thick] ($(\x+0.2,2)$) ellipse (.2 and .1);
             }
+
+            \foreach \x in {0.4,1.65,...,8.25}
+            \draw[-stealth,thick] (\x,2.25) to[bend left=90,looseness=1.25] node[above,font=\footnotesize]{$100\si{\mu L}$} ++(.85,0);
             }
         \end{tikzpicture}
+        \caption{Fortynding ved gentagen overførsel fra brønd til brønd.}
     \end{figure}
+
+    Dette medfører en halvering af koncentrationen fra brønd til brønd beskrevet ved rekursionsligningen:
+    \[
+        c_n=c_{\text{opløsning}}\cdot 0.5^n, n \in \left\{1,2,3,...,n\right\}
+    \]
+    Vi opstiller nu en fortyndingsrække hvor den 6.\ brønd svarer til MIC
+    \[
+        1.25\si{mg\per mL}=c_{\text{opløsning}}\cdot 0.5^6 \Leftrightarrow c_{\text{opløsning}}=\frac{1.25\si{mg\per mL}}{0.5^6}=80\si{mg\per mL}
+    \]
+    Da det er nødvendigt at vente på at ethanolen fordamper, ønsker vi at nå den nødvendige koncentration med så lille en mængde ethanol som muligt. En mættet opløsning af ethylparaben i ethanol indeholder $550\si{mg\per mL}$, dvs.\ at det må være nødvendigt at overføre:
+    \[
+        160\si{mg}=550\si{mg\per mL} \cdot V_{\text{ethanol}} \Leftrightarrow V_{\text{ethanol}}=\frac{160\si{mg}}{550\si{mg\per mL}}=290\si{\mu L}
+    \]
+    Da vi arbejder med en brøndvolumen på $100\si{\mu L}$ benytter vi en 10.\ del af dette. En fortyndingsrække opstiles derfor ved at fylde brøndene med $29\si{\mu L}$ ren ethanol, hvorefter det fortyndes med den mættede opløsning.
+
+    De samme beregninger udføres for propylparaben hvorved vi har at:
+    \[
+        160\si{mg}=746\si{mg\per mL} \cdot V_{\text{ethanol}} \Leftrightarrow V_{\text{ethanol}}=\frac{160\si{mg}}{746\si{mg\per mL}}=210\si{\mu L}
+    \]
+    Altså benyttes $21\si{\mu L}$ under opstillingen af propylfortyndingsrækken.
+
+    Efter ethanolen i brøndene er fordampet er vi efterladt med de korresponderende mængder af paraben. Måling af MIC ved svært opløselige produkter kan være svært, da det i praksis medfører at vi vil have et lag uopløst paraben liggende i bunden af brønden, selv ved MIC i teorien da den befinder sig over begge parabeners opløselighed i vand. 
+
+    Dog er der nogle faktorere der medfører at opløseligheden ``stiger'' i praksis. Bl.a. parabenernes evne til at reagere med de lipide bakteriecellemembraner, hvilket medfører en større opløselighed i mediet, samt at OD600--målingerne foregår ved højere temperatur (inkubationstemperatur, $37\si{\degree C}$) end stuetemperatur.

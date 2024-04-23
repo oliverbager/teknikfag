@@ -18,18 +18,18 @@
         \caption{Fysiske egenskaber af forskellige parabener \parencite{PubChem}.}
         \begin{tabular}{ccccc}
             \toprule
-            & \multicolumn{2}{c}{Opløselighed $\left[\si{g\per 100g}\right]$} & & \\
+            & \multicolumn{2}{c}{Opløselighed $\left[\si{mg\per mL}\right]$} & & \\
             \cmidrule(r){2-3}
             Paraben & Vand & Ethanol & MV $\left[\si{g\per mol}\right]$ & SMP $\left[\si{\degree C}\right]$ \\
             \midrule
-            Methylparaben & 0.25 & 52 & 152.15 & 125 \\
-            Ethylparaben & 0.085 & 70 & 166.17 & 117 \\ 
-            Propylparaben & 0.05 & 95 & 180.2 & 96 \\
-            Butylparaben & 0.021 & 210 & 194.23 & 68 \\
+            Methylparaben & 2.5 & 408 & 152.15 & 125 \\
+            Ethylparaben & 0.85 & 550 & 166.17 & 117 \\ 
+            Propylparaben & 0.5 & 746 & 180.2 & 96 \\
+            Butylparaben & 0.21 & 1649 & 194.23 & 68 \\
             \bottomrule
         \end{tabular}
     \end{table}
-    Alternativt kan typisk ester-navngivning også benyttes, dog angives parabener hyppigst ved navnet på deres alkylkæde efterfulgt af \textit{paraben}, eksempelvis: \textit{ethylparaben}. \textit{Paraben} stammer fra navnet på 4-hydroxybenzoesyre. Alternativ navngivning jf. de relative molekylepositioner villet medføre at den kaldes \textit{p}-hydroxybenzoesyre, grundet hydroxygruppens placering i \textit{para}-positionen, derfra kommer \textit{para}-hydroxy\textit{ben}zoesyre.
+    Alternativt kan typisk ester--navngivning også benyttes, dog angives parabener hyppigst ved navnet på deres alkylkæde efterfulgt af \textit{paraben}, eksempelvis: \textit{ethylparaben}. \textit{Paraben} stammer fra navnet på 4-hydroxybenzoesyre. Alternativ navngivning jf. de relative molekylepositioner villet medføre at den kaldes \textit{p}-hydroxybenzoesyre, grundet hydroxygruppens placering i \textit{para}-positionen, derfra kommer \textit{para}-hydroxy\textit{ben}zoesyre.
 
     \subsubsection{Virkningsmekanisme}
     Parabeners virkningsmekanisme er ikke veletableret, og det er endnu ikke fuldstændigt sikkert hvordan de hindrer mikroorganismers vækst. Nogle populære teorier bygger dog på at de \parencite{Nell2001}:
@@ -351,10 +351,9 @@
         \frac{n_{\text{høj}}}{n_{\text{lav}}}=\mathrm{e}^{\frac{\Delta E}{kT}}
     \]
     som medfører at $M \neq 0$, da der vil være en populationsforskle med bias mod det lave energistadie, hvilket medfører at vi har en bulk magnetiseringsvektor givet ved en positiv skalar af en enhedsvektor langs $z$-aksen.
-    \begin{figure}[H]
-        \vskip -42pt
-        \resizebox{\linewidth}{!}{
-        \begin{tikzpicture} \hskip -32pt
+    \begin{figure}[H]\centering
+        \resizebox{0.44\linewidth}{!}{
+        \begin{tikzpicture}
             \begin{axis}[
                 view={-45}{-35},axis lines=center,densely dashed,
                 xmax=3,xmin=-3,ymax=3,ymin=-3,zmax=5,zmin=-5,
@@ -389,11 +388,13 @@
         \node at (1.4,2){$x$};
         \node at (5.4,2){$y$};
         \node at (3.4,4.5){$z$};
-        \end{tikzpicture} \hskip -64pt 
+        \end{tikzpicture} 
+        }
         \begin{tikzpicture}
             \node at (0,0){};
-            \draw[-stealth,solid] (0,2.25) -- node[above]{$\sum$} (1,2.25);
-        \end{tikzpicture} \hskip -32pt 
+            \draw[-stealth,solid] (0,1.5) -- node[above]{$\sum$} (1,1.5);
+        \end{tikzpicture}
+        \resizebox{0.44\linewidth}{!}{
         \begin{tikzpicture}
             \begin{axis}[
                 view={-45}{-35},axis lines=center,densely dashed,
@@ -417,9 +418,9 @@
         \node at (1.4,2){$x$};
         \node at (5.4,2){$y$};
         \node at (3.4,4.5){$z$};
-        \end{tikzpicture} \hskip -32pt
+        \end{tikzpicture} 
         }
-        \vskip -50pt \caption{Omdannelse fra magnetiske momenter til bulk magnetisering ved summation. Antal molekyler i højt-- og lavt energistadie repræsenterer ikke virkeligheden.}
+        \caption{Omdannelse fra magnetiske momenter til bulk magnetisering ved summation. Antal molekyler i højt-- og lavt energistadie repræsenterer ikke virkeligheden.}
     \end{figure}
 
     Molekylet der undersøges vil have en række mulige energiniveauer givet ved:
@@ -701,15 +702,67 @@
         }
         \caption{Symmetrisk-- og asymmetrisk bøjning af kovalente bånd i triatomigt molekyle.}
     \end{figure}
-    Bøjninger kan ske både i eget plan og vinkelret derpå. Dvs.\ at atomerne ikke udelukkende har mulighed for at bøje fra side til side, men også frem og tilbage. Derudover bevæger det centrale molekyle sig også, da molekylets massemidtpunkt \textit{ikke} kan forskydes af vibrationerne.
+    Bøjninger kan ske både i eget plan og vinkelret derpå hvis molekylet er lineært (eksempelvis CO$_2$). Dvs.\ at nogle molekyler ikke udelukkende har mulighed for at bøje fra side til side, men også frem og tilbage. Derudover bevæger det centrale molekyle sig også, da molekylets massemidtpunkt \textit{ikke} kan forskydes af vibrationerne.
 
+    Mængden af mulige vibrationer er afhængigt af hvor mange frihedsgrader molekylet har. Idet atomer bevæger sig i et 3--dimensionelt rum, må hvert atom have 3 frihedsgrader, altså vil et molekyle have $3n$, hvor $n$ er mængden af atomer i molekylet, frihedsgrader.
+
+    For udelukkende at undersøge de intermolekylære vibrationer fratrækkes de translatoriske-- og rotoriske frihedsgrader, og vi får derfor at det for ikke--lineære molekyler må være $3n-6$ frihedsgrader, og for lineære molekyler $3n-5$.
+
+    Kigger vi eksempelvis på et diatomigt molekyle som HCl bliver det har klart at molekylet er lineært, samt at $n=2$. Der må altså være $3\cdot 2-5=1$ mulig vibration, hvilket stemmer, da den eneste mulige vibration er den fjederlignende bevægelse i det kovalente bånd.
+    \begin{figure}[H]\centering
+        \begin{tikzpicture}
+            \draw[thick] (0,0) circle (1) node{H} (5.25,0) circle (1.25) node{Cl};
+            \draw[thick] (1,0) -- (4,0);
+            \draw[-stealth,ultra thick] (-1,0) -- (-3,0); 
+            \draw[-stealth,ultra thick] (6.5,0) -- (8.5,0);
+        \end{tikzpicture}
+        \caption{Frihedsgrader for lineært diatomigt molekyle.}
+    \end{figure}
+    For et ikke-lineært triatomigt molekyle, eksempelvis H$_2$O, vil vi i stedet hve $3\cdot 3-6=3$ frihedsgrader, der korresponderer til hhv.\ den symmetriske-- og asymmetriske strækning af de kovalente bånd, samt bøjning af bindingen til hydrogenatomerne \parencite{Theo2012}.
+    \begin{figure}[H]
+        \resizebox{\linewidth}{!}{
+        \begin{tikzpicture}    
+            \node[draw,circle,thick,minimum size=2cm] (a) at (0,0){H}; 
+            \node[draw,circle,thick,minimum size=2.5cm] (b) at (3,.75){O}; 
+            \node[draw,circle,thick,minimum size=2cm] (c) at (6,0){H};
+
+            \node[draw,circle,thick,minimum size=2cm] (d) at (11,0){H}; 
+            \node[draw,circle,thick,minimum size=2.5cm] (e) at (14,.75){O}; 
+            \node[draw,circle,thick,minimum size=2cm] (f) at (17,0){H};
+
+            \node[draw,circle,thick,minimum size=2cm] (g) at (5.5,-4.75){H};
+            \node[draw,circle,thick,minimum size=2.5cm] (h) at (8.5,-4){O}; 
+            \node[draw,circle,thick,minimum size=2cm] (i) at (11.5,-4.75){H};
+
+            \draw[thick] (a) -- (b) (b) -- (c);
+            \draw[thick] (d) -- (e) (e) -- (f);
+            \draw[thick] (g) -- (h) (h) -- (i);
+
+            \draw[-stealth,ultra thick] (a) -- (-2,-.5) 
+            \draw[-stealth,ultra thick] (c) -- (8,-.5);
+            \draw[-stealth,ultra thick] (b) -- ++(0,2);
+
+            \draw[-stealth,ultra thick] (d) -- (9,-.5); 
+            \draw[stealth-,ultra thick] (f) -- (19,-.5);
+            \draw[-stealth,ultra thick] (e) -- ++(2,0);
+
+            \draw[-stealth,ultra thick] (g) -- ++(0,2); 
+            \draw[-stealth,ultra thick] (i) -- ++(0,2);
+            \draw[-stealth,ultra thick] (h) -- ++(0,-2);
+        \end{tikzpicture}
+        }
+        \caption{Frihedsgrader for H$_2$O molekyle.}
+    \end{figure}
     Indenfor IR--spektroskopi indføres et nyt mål for bølgelængden, \textit{bølgenummeret}, givet ved:
     \[
         \nu=\lambda^{-1}
     \]
     Med udgangspunkt i disse opdeles IR--området i 3 forskellige ``zoner'' \parencite{Shah2018}:
     \begin{itemize}
-        \item[1)] Tæt--IR, $\nu \in \left[14000-4000\si{cm^{-1}}\right]$
-        \item[2)] Mellem--IR, $\nu \in \left[4000-400\si{cm^{-1}}\right]$
-        \item[3)] Lang--IR, $\nu \in \left[400-40\si{cm^{-1}}\right]$
+        \item[1)] NIR, $\nu \in \left[14000-4000\si{cm^{-1}}\right]$
+        \item[2)] MIR, $\nu \in \left[4000-400\si{cm^{-1}}\right]$
+        \item[3)] FIR, $\nu \in \left[400-40\si{cm^{-1}}\right]$
     \end{itemize}
+    Til overordnet analyse benyttes ofte blot MIR--intervallet, da det er her man vil kunnet identificere de fleste funktionelle grupper og typer af bindinger, mens at FIR er langt mere komplekst og indeholder en stor mængde af vibrationer, hvilket gør det svært at type på. NIR korresponderer oftest til kombinationsvibrationer, eller ``molekylære overtoner'', spring i flere energistadier af gangen (eksempelvis $\Delta E_{1\rightarrow 3}$), hvilket igen gør det enormt svært at tyde dem.
+
+
