@@ -1,5 +1,5 @@
 \section{Metoder}
-    \subsection{Synteser} 
+    \subsection{Syntese} 
     Med udgangspunkt i den fundne syntesevejledning \parencite{Ole2019} udføres syntesen for ethyl-- og propylparaben grundet deres respektive alkoholers lavewre farlighed end methanol. Af samme grund benyttes ethanol som opløsningsmiddel under oprensningen, idet der herved helt undgås eksponering for methanol hvilket drastisk minimerer eksponeringen for farlige kemikalier under syntesen.
 
     Det vælges at producere 2 parabener for at muliggøre samligning af deres respektive H--NMR-- og IR--spektre, og begrunde hvorfor disse er opstået. 
@@ -8,7 +8,6 @@
 
     Et flowdiagram for syntesen udarbejdes for at give overblik over syntesen, samt for at give bedre overblik gennem processen. Flowdiagrammet kan ses under bilag.
 
-    \subsubsection{Syntese 1: Ethylparaben}
     Ca.\ 5g 4-hydroxybenzoesyre afvejes i rundbundet kolbe med slib:
     \begin{figure}[H] \centering
         \includegraphics[width=\textwidth]{billeder/afvejning}
@@ -25,7 +24,10 @@
     Et regneark udarbejdes til bestemmelsen af det teoretiske udbytte gennem de resterende synteser, en version med værdierne for denne syntese kan ses i bilag 2.
 
     Der afmåles nu 30mL ethanol i måleglas, hvorefter det overføres til den rundbundede kolbe. Kolben rystes til 4-hydroxybenzoesyren er fuldstændigt opløst, hvorefter 2.5mL svovlsyre tilsættes dråbevist under konstant forsigtig omrystning. Opløsningen placeres i en varmekappe og forsynes med et svalerør for at koge med reflux i ca. 1 time.
-
+    \begin{figure}[H]
+        \includegraphics[width=\textwidth]{billeder/opstilling}
+        \caption{Forsøgsopstilling til syntesen.}
+    \end{figure}
     Efter timen er gået slukkes varmekappen, hvorefter opløsningen nedkøles indtil det ikke længere er kogende og overføres til et 250mL bægerglas med 75mL demineraliseret vand. Bægerglasset placeres nu på en kogeplade og tilsættes en magnetomrører, hvorefter der sørges for moderat omrøring. Blandingen bestående af 10\% natriumcarbonat tilsættes nu opløsningen indtil udviklingen af gas stopper, hvorved svovlsyren vil være neutraliseret.
 
     Idet det ikke indgår i forsøgsvejledningen, udregnes mængden af natriumcarbonat der villet være nødvendig for at neutralisere svovlsyren, dog vil der under processen gøres brug af natriumcarbonat i overskud da det ingen negativ virkning vil have, eftersom temperaturen vil være for lav til at forsæbning af parabenen vil kunnet ske.
@@ -105,12 +107,6 @@
     Den neutraliserede opløsning sugefiltreres og skylles 3 gange med demineraliseret vand efter kort tids afkøling. Det isolerede krystallinske stof overføres til et 250mL bægerglas. Samtidigt opvarmes 50mL hhv.\ ethanol og vand til opvarmning i hvert deres bægerglas. Når ethanolen koger opløses det krystallinske stof i så lidt som muligt hvorefter varmt vand tilsættes til opløsningen bliver uklar.
 
     Opløsningen stilles nu til frivillig nedkøling, hvorved parabenen igen udfældes og kan isoleres ved sugefiltrering i afvejet glasfilterdigel. Det dannede produkt stilles til tørring i glasfilterdiglen benyttet til filtreringen.
-
-    \subsubsection{Syntese 2: Propylparaben}
-    
-
-    \subsubsection{Syntese 3: Dobbeltsyntese}
-        
 
     \subsection{Smeltepunktsbestemmelse}
     Smeltepunktsbestemmelsen udføres først med udgangspunkt i et kommercielt indkøbt produkt for at have et teoretisk smeltepunkt hvilket gør det muligt at på forhånd undgå systematiske afvigelser. En smule af de kommercielt købte produkter stampes op i et lukket kapillærrør, hvorefter det ``droppes'' gentagne gange for at komprimere produktet. Det placeres nu i smeltepunktsbestemmelsesapparetet, som varmes op til en temperatur $10\si{\degree C}$ lavere end det forventede smeltepunkt, hvorefter vi langsomt varmer op indtil produktet smelter.
@@ -208,8 +204,8 @@
     Modsat agar--diffusion benyttes fortyndingsrækker til at bestemme definitive værdier for den minimale inhibitoriske koncentration for forskellige antibakterielle midler (antibiotika, konserveringsmidler, osv.). 
 
     Dette gøres ved at opstille en fortyndingsrække i et bakteriefyldt medie med det antibaktierelle stof man ønsker at undersøge. Ved at have forskellige koncentrationer af stoffet, og herefter følge udviklingen i OD600 over tid, kan man undersøge hvordan de forskellige koncentrationer påvirker bakterievæksten.
-    \begin{figure}[h]\centering
-        \begin{tikzpicture}
+    \begin{figure}[H]\centering
+        \begin{tikzpicture}[scale=.97]
             \fill[blue!99.9] (-3,.5) rectangle ++(1,-.5) (-3,0) to[bend right=90,looseness=1.25] (-2,0) (-2.5,.5) ellipse (.5 and .2);
             \fill[blue!88.8] (0,0) rectangle ++(0.4,0.5) (0,0) to[bend right=90, looseness=1.75] ++(0.4,0);
             \fill[blue!77.7] (1.25,0) rectangle ++(0.4,0.5) (1.25,0) to[bend right=90, looseness=1.75] ++(0.4,0);
@@ -238,7 +234,7 @@
             \draw[-stealth,thick] (\x,2.25) to[bend left=90,looseness=1.25] node[above,font=\footnotesize]{$100\si{\mu l}$} ++(.85,0);
             }
         \end{tikzpicture}
-        \caption{fortynding ved gentagen overførsel fra brønd til brønd.}
+        \caption{Fortynding ved gentagen overførsel fra brønd til brønd.}
     \end{figure}
 
     Dette medfører en halvering af koncentrationen fra brønd til brønd beskrevet ved rekursionsligningen:
@@ -297,18 +293,18 @@
 
             \draw[-stealth,thick] (7.7,3.25) node[above,font=\footnotesize]{Teoretisk MIC} -- (7.7,2.25);
 
-            \node[font=\scriptsize] at (0.2,-.45){$80$}
-            \node[font=\scriptsize] at (1.45,-.45){$40$}
-            \node[font=\scriptsize] at (2.7,-.45){$20$}
-            \node[font=\scriptsize] at (3.95,-.45){$10$}
-            \node[font=\scriptsize] at (5.2,-.45){$5$}
-            \node[font=\scriptsize] at (6.45,-.45){$2.5$}
-            \node[font=\scriptsize] at (7.7,-.45){$1.25$}
-            \node[font=\scriptsize] at (8.95,-.45){$0.63$}
-            \node[font=\scriptsize] at (10.2,-.45){$0.31$}
-            \node[font=\scriptsize] at (11.45,-.45){$0.16$}
-            \node[font=\scriptsize] at (12.7,-.45){$0.078$}
-            \node[font=\scriptsize] at (13.95,-.45){$0.039$}
+            \node[font=\scriptsize] at (0.2,-.45){$80$};
+            \node[font=\scriptsize] at (1.45,-.45){$40$};
+            \node[font=\scriptsize] at (2.7,-.45){$20$};
+            \node[font=\scriptsize] at (3.95,-.45){$10$};
+            \node[font=\scriptsize] at (5.2,-.45){$5$};
+            \node[font=\scriptsize] at (6.45,-.45){$2.5$};
+            \node[font=\scriptsize] at (7.7,-.45){$1.25$};
+            \node[font=\scriptsize] at (8.95,-.45){$0.63$};
+            \node[font=\scriptsize] at (10.2,-.45){$0.31$};
+            \node[font=\scriptsize] at (11.45,-.45){$0.16$};
+            \node[font=\scriptsize] at (12.7,-.45){$0.078$};
+            \node[font=\scriptsize] at (13.95,-.45){$0.039$};
         \end{tikzpicture}
         \caption{Koncentrationer i ELISA--brønde afrundet til 2 decimaler.}
     \end{figure}
