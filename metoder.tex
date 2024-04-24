@@ -2,7 +2,7 @@
     \subsection{Synteser} 
     Med udgangspunkt i den fundne syntesevejledning \parencite{Ole2019} udføres syntesen for ethyl-- og propylparaben grundet deres respektive alkoholers lavewre farlighed end methanol. Af samme grund benyttes ethanol som opløsningsmiddel under oprensningen, idet der herved helt undgås eksponering for methanol hvilket drastisk minimerer eksponeringen for farlige kemikalier under syntesen.
 
-    Det vælges at producere 2 parabener for at muliggøre samligning af deres respektive H--NMR--spektre, og begrunde hvorfor disse er opstået. 
+    Det vælges at producere 2 parabener for at muliggøre samligning af deres respektive H--NMR-- og IR--spektre, og begrunde hvorfor disse er opstået. 
 
     Derudover giver det også mening jf.\ et eventuelt hæmningsforsøg at fravælge methylparaben da den generelt ses som havende en lavere effektivitet grundet dens ringere evne til at reagere med mikroorganismernes cellemembraner pga.\ større polaritet.
 
@@ -168,7 +168,7 @@
         \end{tikzpicture}
         \caption{Diffusion af stof indeholdt i papirdiske.}
     \end{figure}
-    Den vækstfrie radius vil afhænge af antibiotikaens effektivitet, da koncentrationen vil falde i takt med at stoffet diffunderer når længere og længere ud. Med udgangspunkt heri kan et kvalitativt gæt på den minimum inhibitoriske koncentration opstilles.
+    Den vækstfrie radius vil afhænge af antibiotikaens effektivitet, da koncentrationen vil falde i takt med at stoffet diffunderer længere og længere ud. Med udgangspunkt heri kan et kvalitativt gæt på den minimum inhibitoriske koncentration opstilles.
     \begin{figure}[H]\centering
         \begin{tikzpicture}
             \filldraw[very thick,fill=yellow!10] (0,0) node(a){} circle (2);
@@ -220,7 +220,7 @@
             \fill[blue!22.2] (7.5,0) rectangle ++(0.4,0.5) (7.5,0) to[bend right=90, looseness=1.75] ++(0.4,0);
             \fill[blue!11.1] (8.75,0) rectangle ++(0.4,0.5) (8.75,0) to[bend right=90, looseness=1.75] ++(0.4,0);
             
-            \draw[-,thick] (-3,1.5) -- (-3,0) (-2,0) -- (-2,1.5) (-3,0) to[bend right=90,looseness=1.25] node[below]{parabenopløsning} (-2,0) (-3,0) to[bend left=90,looseness=1.25,opacity=.5] (-2,0);
+            \draw[-,thick] (-3,1.5) -- (-3,0) (-2,0) -- (-2,1.5) (-3,0) to[bend right=90,looseness=1.25] node[below]{Parabenopløsning} (-2,0) (-3,0) to[bend left=90,looseness=1.25,opacity=.5] (-2,0);
             \draw[thick] (-2.5,1.5) ellipse (0.5 and 0.25) node(a)[above]{};
             \draw[thick,opacity=.4] (-2.5,.5) ellipse (.5 and .2);
             \draw[-stealth,thick] (a) to[bend left=75,looseness=1.25] node[above,font=\footnotesize]{$100\si{\mu l}$} (0,2.25)
@@ -294,17 +294,20 @@
             \foreach \x in {0.4,1.65,...,13.25}
             \draw[-stealth,thick] (\x,2.25) to[bend left=90,looseness=1.25] node[above,font=\footnotesize]{$100\si{\mu l}$} ++(.85,0);
             }
+
+            \draw[-stealth,thick] (7.7,3.25) node[above,font=\footnotesize]{Teoretisk MIC} -- (7.7,2.25);
+
             \node[font=\scriptsize] at (0.2,-.45){$80$}
             \node[font=\scriptsize] at (1.45,-.45){$40$}
             \node[font=\scriptsize] at (2.7,-.45){$20$}
             \node[font=\scriptsize] at (3.95,-.45){$10$}
             \node[font=\scriptsize] at (5.2,-.45){$5$}
             \node[font=\scriptsize] at (6.45,-.45){$2.5$}
-            \node[font=\scriptsize] at (7.70,-.45){$1.25$}
+            \node[font=\scriptsize] at (7.7,-.45){$1.25$}
             \node[font=\scriptsize] at (8.95,-.45){$0.63$}
             \node[font=\scriptsize] at (10.2,-.45){$0.31$}
             \node[font=\scriptsize] at (11.45,-.45){$0.16$}
-            \node[font=\scriptsize] at (12.70,-.45){$0.078$}
+            \node[font=\scriptsize] at (12.7,-.45){$0.078$}
             \node[font=\scriptsize] at (13.95,-.45){$0.039$}
         \end{tikzpicture}
         \caption{Koncentrationer i ELISA--brønde afrundet til 2 decimaler.}
@@ -313,7 +316,7 @@
 
     Dog er der nogle faktorere der medfører at opløseligheden ``stiger'' i praksis. Bl.a. parabenernes evne til at reagere med de lipide bakteriecellemembraner, hvilket medfører en større opløselighed i mediet, samt at OD600--målingerne foregår ved højere temperatur (inkubationstemperatur, $30\si{\degree C}$) end stuetemperatur.
 
-    ELISA--pladerne er delt op i 8 rækker af 12 brønde. Vi benytter her række 1 og 5 til kontrol, 2 og 3 til \textit{bacillus cereus} med hhv.\ ethylparaben og propylparaben, samt 6 og 7 til \textit{escherichia coli}, igen med ethyl-- og propylparaben.
+    $100\si{\mu L}$ en--dags inkuberet LB--medie poddet med bakterierne vi ønsker at undersøge fortyndes til $A \in \left[0.1;0.2\right]$ og overføres til hver brønd. En skematisk illustration af opstillingen kan ses nedenfor:
     \begin{figure}[H]\centering
         \resizebox{\linewidth}{!}{
         \begin{tikzpicture}
