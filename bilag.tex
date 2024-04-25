@@ -2,12 +2,6 @@
 
     \captionsetup{font={color=white}}
 
-    \section{Gantt--diagram}
-    \begin{figure}[H]
-        \includegraphics[width=\textwidth]{bilag/gantt}
-        \caption{}
-    \end{figure}
-
     \section{Flowchart}
     \begin{figure}[H] \centering
         \includegraphics[width=\textwidth]{bilag/flowdiagram}
@@ -90,7 +84,31 @@
         }
         \caption{} \vskip -24pt
     \end{table}
+    
+    \captionsetup{font={color=black}}
+    \section{TLC--plader}
+    \subsection{Syntese 1}
+    \begin{figure}[H]
+        \includegraphics[width=0.48\linewidth]{billeder/tlc1}
+        \includegraphics[width=0.48\linewidth]{billeder/tlcmarkeret1}
+        \caption{TLC--plader fra syntese 1, eget produkt til venstre og kommercielt til højre}
+    \end{figure} \vskip -24pt
 
+    \subsection{Syntese 2}
+    \begin{figure}[H]
+        \includegraphics[width=0.48\linewidth]{billeder/tlc2}
+        \includegraphics[width=0.48\linewidth]{billeder/tlcmarkeret2}
+        \caption{TLC--plader fra syntese 2, eget produkt til venstre og kommercielt til højre}
+    \end{figure} \vskip -24pt
+
+    \subsection{Dobbeltsyntese}
+    \begin{figure}[H]
+        \includegraphics[width=0.48\linewidth]{billeder/tlc3}
+        \includegraphics[width=0.48\linewidth]{billeder/tlcmarkeret3}
+        \caption{TLC--plader fra syntese 3, første 2 er ethylparaben, næste 2 er propylparaben, eget produkt til venstre og kommercielt til højre}
+    \end{figure} \vskip -24pt
+
+    \captionsetup{font={color=white}}
     \addcontentsline{toc}{section}{H--NMR--Spektre}
 
     \includepdf[pages=-,landscape=true,addtotoc={1,subsection,2,Ethylparaben,ethylspek,2,subsubsection,3,Peaks,ethylpeaks}]{bilag/ethylnmr.pdf}
@@ -102,9 +120,5 @@
     \includepdf[pages=-,landscape=true,addtotoc={1,subsection,1,Ethylparaben,ethylir}]{bilag/ethylir.pdf}
 
     \includepdf[pages=-,landscape=true,addtotoc={1,subsection,1,Propylparaben,propylir}]{bilag/propylir.pdf}
-
-    \section{Hæmningsforsøg}
-
-    \includepdf[pages=-,addtotoc={1,section,1,Forsøgsvejledning,forsøgsvejledning}]{bilag/vejledning.pdf}
 
     \includepdf[pages={1,2,3},addtotoc={1,section,1,Risikovurdering,risikovurdering}]{bilag/risikovurdering.pdf}
