@@ -15,7 +15,7 @@
         \includegraphics[width=\textwidth]{billeder/afvejning}
         \caption{Afvejning af 4-hydroxybenzoesyre.}
     \end{figure} 
-    Da syntesen sker med et overskud af alkohol vil der ideelt ske en fuldstændig reaktion. På baggrund heraf bestemmes det teoretiske udbytte ved at sætte dets stofmængde lig stofmængden af 4-hydroxybenzoesyre:
+    Da syntesen sker med et overskud af alkohol vil der ideelt ske en fuldstændig reaktion. På baggrund heraf bestemmes det teoretiske udbytte ved at sætte stofmængden af 4--hydroxybenzoesyre lig stofmængden af parabenen der dannes under syntesen:
     \[
         n_{\text{4-hydroxybenzoesyre}}=\frac{5.1338\si{g}}{138.12\si{g \per mol}}=0.037169\si{mol}=n_{\text{ethylparaben}}
     \]
@@ -23,7 +23,7 @@
     \[
         m_{\text{ethylparaben}}=0.037169\si{mol} \cdot 166.17\si{g\per mol}=6.1745g
     \]
-    Et regneark udarbejdes til bestemmelsen af det teoretiske udbytte gennem de resterende synteser, en version med værdierne for denne syntese kan ses i bilag 2.
+    Et regneark udarbejdes til bestemmelsen af det teoretiske udbytte gennem de resterende synteser, en version med værdierne for denne syntese kan ses under bilag.
 
     Der afmåles nu 30mL ethanol i måleglas, hvorefter det overføres til den rundbundede kolbe. Kolben rystes til 4-hydroxybenzoesyren er fuldstændigt opløst, hvorefter 2.5mL svovlsyre tilsættes dråbevist under konstant forsigtig omrystning. 
 
@@ -112,6 +112,8 @@
 
     Opløsningen stilles nu til frivillig nedkøling, hvorved parabenen igen udfældes og kan isoleres ved sugefiltrering i afvejet glasfilterdigel. Det dannede produkt stilles til tørring i glasfilterdiglen benyttet til filtreringen, hvorefter udbyttet bestemmes ved afvejning.
 
+    Efterfølgendende synteser udføres på samme måde, dog med alkoholen svarende til parabenen der ønskes at danne.
+
     \subsection{Smeltepunktsbestemmelse}
     Smeltepunktsbestemmelsen udføres først med udgangspunkt i et kommercielt indkøbt produkt for at have et teoretisk smeltepunkt hvilket gør det muligt at på forhånd undgå systematiske afvigelser. 
 
@@ -168,7 +170,7 @@
     \subsubsection{Agar--diffusion}
     I laboratorier benyttes agar--diffusion til at afprøve og sammenligne forskellige antibiotikas effekt på en isoleret bakteriekultur. Dette gøres ved at opløse antibiotikaet i et passende opløsningsmiddel som papirdiske derefter vædes i, hvorefter de stilles til tørring. Disse spredes over en Muller--Hinton--agarplade podet med bakteriearten man ønsker at undersøge, og stilles så til inkubering. 
 
-    Antibiotikaet der befinder sig i papirdisken vil \textit{diffundere}, dvs.\ vandre fra papirdisken og ud i agaren, hvilket medfører ad der vil være en radius omkring disken hvor der ingen vækst er (hvis det antibakterielle middel er effektivt).
+    Antibiotikaet der befinder sig i papirdisken vil \textit{diffundere}, dvs.\ vandre fra papirdisken og ud i agaren, hvilket medfører at der vil være en radius omkring disken hvor der ingen vækst er (hvis det antibakterielle middel er effektivt).
     \begin{figure}[H]\centering
         \begin{tikzpicture}
             \filldraw[very thick,fill=yellow!10] (0,0) node(a){} circle (2);
@@ -228,7 +230,7 @@
     \end{figure}
 
     \subsubsection{Fortyndingsrække}
-    Modsat agar--diffusion benyttes fortyndingsrækker til at bestemme definitive værdier (eller værdi--intervaller) af den minimale inhibitoriske koncentration for forskellige antibakterielle midler (antibiotika, konserveringsmidler, osv.). 
+    Modsat agar--diffusion benyttes fortyndingsrækker til at bestemme definitive værdier (eller værdi--intervaller) for den minimale inhibitoriske koncentration af forskellige antibakterielle midler (antibiotika, konserveringsmidler, osv.). 
 
     Dette gøres ved at opstille en fortyndingsrække i et bakteriefyldt medie med det antibaktierelle stof man ønsker at undersøge. Ved at have forskellige koncentrationer af stoffet, og herefter følge udviklingen i OD600 over tid, kan man undersøge hvordan de forskellige koncentrationer påvirker bakterievæksten.
     \begin{figure}[H]\centering
@@ -339,7 +341,7 @@
 
     Dog er der nogle faktorere der medfører at opløseligheden ``stiger'' i praksis. Bl.a. parabenernes evne til at reagere med de lipide bakteriecellemembraner, hvilket medfører en større opløselighed i mediet, samt at OD600--målingerne foregår ved højere temperatur (inkubationstemperatur, $30\si{\degree C}$) end stuetemperatur.
 
-    $100\si{\mu L}$ en--dags inkuberet LB--medie poddet med bakterierne vi ønsker at undersøge fortyndes til $A_{600} \in \left[0.1;0.2\right]$ og overføres til hver brønd. En skematisk illustration af opstillingen kan ses nedenfor:
+    En--dags inkuberet LB--medie, fremstilt af 10g trypton, 5g gærekstrakt og 5g NaCl fortyndet til $V=1\si{L}$ og herefter autoklaveret, og derefter poddet med bakterierne vi ønsker at undersøge fortyndes til $A_{600} \in \left[0.1;0.2\right]$, hvorefter $100\si{\mu L}$ overføres til hver brønd. En skematisk illustration af opstillingen kan ses nedenfor:
     \begin{figure}[H]\centering
         \resizebox{\linewidth}{!}{
         \begin{tikzpicture}
@@ -375,4 +377,4 @@
 
     Med udgangspunkt heri bestemmes hhv.\ MIC90, MIC50 og MIC10, der svarer til parabenkoncentrationerne der medfører en vækstreduktion på $90\%$, $50\%$ og  $10\%$, hvilket herefter sammenlignes med teoretiske værdier fra opslag i litteraturen.
 
-    Umiddelbart har vi forventninger til nogle afvigende målinger i brøndene med højeste koncentrationer, da parabenen ikke kan holdes opløst og derfor vil ophobe sig på bunden af brøndene, hvilket vil gøre det nødvendigt at rydde op i de indsamlede data.
+    Umiddelbart har vi forventninger til nogle afvigende målinger i brøndene med de højeste koncentrationer, da parabenen ikke kan holdes opløst og derfor vil ophobe sig på bunden af brøndene, hvilket vil gøre det nødvendigt at rydde op i de indsamlede data.
